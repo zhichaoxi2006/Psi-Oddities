@@ -10,5 +10,7 @@
   "psi_oddities.spellpiece.operator_entity_saturation": "Operator: Saturation",
   "psi_oddities.spellpiece.operator_entity_saturation.desc": "Gets an entity's current Saturation",
   "psi_oddities.spellpiece.trick_saturation": "Trick: Saturation",
-  "psi_oddities.spellpiece.trick_saturation.desc": "Applies a Saturation effect"
+  "psi_oddities.spellpiece.trick_saturation.desc": "Applies a Saturation effect",
+  "psi_oddities.spellpiece.trick_caster_blink": "Trick: Caster Blink",
+  "psi_oddities.spellpiece.trick_caster_blink.desc": "Teleports the caster in the given direction"
 }
