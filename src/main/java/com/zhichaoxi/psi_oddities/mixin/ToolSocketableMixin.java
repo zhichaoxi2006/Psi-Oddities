@@ -45,7 +45,7 @@ public abstract class ToolSocketableMixin {
 
     /**
      * @author zhichaoxi2006
-     * @reason fix $833
+     * @reason fix #833
      */
     @Overwrite
     public List<Integer> getRadialMenuSlots() {
