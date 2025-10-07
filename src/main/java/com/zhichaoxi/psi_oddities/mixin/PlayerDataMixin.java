@@ -29,19 +29,21 @@ public abstract class PlayerDataMixin {
     @Inject(method = "deductPsi(IIZZ)V", at = @At("HEAD"), cancellable = true)
     private void deductPsi(int psi, int cd, boolean sync, boolean shatter, CallbackInfo ci) {
         ItemStack cad = getCAD();
-        ICAD cadItem = (ICAD) cad.getItem();
-        ItemStack battery = cadItem.getComponentInSlot(cad, EnumCADComponent.BATTERY);
-        if (!battery.isEmpty() && battery.getItem() == ModItems.cadBatteryFlux) {
-            Player player = playerWR.get();
-            int cost = psi;
-            ArrayList<IEnergyStorage> energyStorages;
-            if (player != null) {
-                energyStorages = BatteryFluxUtil.findEnergyStorage(player);
-                cost -= BatteryFluxUtil.extractEnergy(energyStorages, cost, false);
-            }
-            if (cost < psi) {
-                deductPsi(cost, cd, sync, shatter);
-                ci.cancel();
+        if (!cad.isEmpty()) {
+            ICAD cadItem = (ICAD) cad.getItem();
+            ItemStack battery = cadItem.getComponentInSlot(cad, EnumCADComponent.BATTERY);
+            if (!battery.isEmpty() && battery.getItem() == ModItems.cadBatteryFlux) {
+                Player player = playerWR.get();
+                int cost = psi;
+                ArrayList<IEnergyStorage> energyStorages;
+                if (player != null) {
+                    energyStorages = BatteryFluxUtil.findEnergyStorage(player);
+                    cost -= BatteryFluxUtil.extractEnergy(energyStorages, cost, false);
+                }
+                if (cost < psi) {
+                    deductPsi(cost, cd, sync, shatter);
+                    ci.cancel();
+                }
             }
         }
     }
