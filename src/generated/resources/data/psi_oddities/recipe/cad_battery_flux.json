@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "psi:ivory_psimetal"
+    },
+    "I": {
+      "item": "psi:cad_assembly_psimetal"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "W": {
+      "item": "psi:ebony_psimetal"
+    }
+  },
+  "pattern": [
+    " W ",
+    "INI",
+    " B "
+  ],
+  "result": {
+    "count": 1,
+    "id": "psi_oddities:cad_battery_flux"
+  }
+}
