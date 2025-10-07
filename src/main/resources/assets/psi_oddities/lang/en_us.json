@@ -8,5 +8,7 @@
   "psi_oddities.spellpiece.operator_entity_foodlevel": "Operator: Foodlevel",
   "psi_oddities.spellpiece.operator_entity_foodlevel.desc": "Gets an entity's current Foodlevel",
   "psi_oddities.spellpiece.operator_entity_saturation": "Operator: Saturation",
-  "psi_oddities.spellpiece.operator_entity_saturation.desc": "Gets an entity's current Saturation"
+  "psi_oddities.spellpiece.operator_entity_saturation.desc": "Gets an entity's current Saturation",
+  "psi_oddities.spellpiece.trick_saturation": "Trick: Saturation",
+  "psi_oddities.spellpiece.trick_saturation.desc": "Applies a Saturation effect"
 }
