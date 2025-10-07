@@ -1,0 +1,12 @@
+{
+  "itemGroup.psi_oddities": "Psi Oddities",
+  "item.psi_oddities.cad_battery_flux": "Flux CAD Battery",
+  "psi_oddities.spellpiece.trick_attack": "Trick: Attack",
+  "psi_oddities.spellpiece.trick_attack.desc": "Attack target Entity",
+  "psi_oddities.spellpiece.trick_nullify_defense": "Trick: Nullify Defense",
+  "psi_oddities.spellpiece.trick_nullify_defense.desc" : "Nullifies the target's innate immunity after taking damage, making it vulnerable to damage again.",
+  "psi_oddities.spellpiece.operator_entity_foodlevel": "Operator: Foodlevel",
+  "psi_oddities.spellpiece.operator_entity_foodlevel.desc": "Gets an entity's current Foodlevel",
+  "psi_oddities.spellpiece.operator_entity_saturation": "Operator: Saturation",
+  "psi_oddities.spellpiece.operator_entity_saturation.desc": "Gets an entity's current Saturation"
+}
