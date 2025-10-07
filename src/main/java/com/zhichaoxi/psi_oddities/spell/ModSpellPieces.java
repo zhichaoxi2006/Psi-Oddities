@@ -6,6 +6,7 @@ import com.zhichaoxi.psi_oddities.spell.operator.entity.PieceOperatorEntityFoodL
 import com.zhichaoxi.psi_oddities.spell.operator.entity.PieceOperatorEntitySaturation;
 import com.zhichaoxi.psi_oddities.spell.trick.blink.PieceTrickCasterBlink;
 import com.zhichaoxi.psi_oddities.spell.trick.entity.PieceTrickAttack;
+import com.zhichaoxi.psi_oddities.spell.trick.entity.PieceTrickDispel;
 import com.zhichaoxi.psi_oddities.spell.trick.entity.PieceTrickNullifyDefense;
 import com.zhichaoxi.psi_oddities.spell.trick.potion.PieceTrickSaturation;
 import net.minecraft.resources.ResourceLocation;
@@ -23,6 +24,7 @@ public final class ModSpellPieces {
     public static PieceContainer trickNullifyDefense;
     public static PieceContainer trickSaturation;
     public static PieceContainer trickCasterBlink;
+    public static PieceContainer trickDispel;
 
     public static void init() {
         operatorEntityFoodLevel = register(PieceOperatorEntityFoodLevel.class, LibPieceNames.OPERATOR_ENTITY_FOODLEVEL, LibPieceGroups.SECONDARY_OPERATORS);
@@ -32,6 +34,7 @@ public final class ModSpellPieces {
         trickNullifyDefense = register(PieceTrickNullifyDefense.class, LibPieceNames.TRICK_NULLIFY_DEFENSE, LibPieceGroups.MISC_TRICKS);
         trickSaturation = register(PieceTrickSaturation.class, LibPieceNames.TRICK_SATURATION, LibPieceGroups.POSITIVE_EFFECTS);
         trickCasterBlink = register(PieceTrickCasterBlink.class, LibPieceNames.TRICK_CASTER_BLINK, LibPieceGroups.MOVEMENT);
+        trickDispel = register(PieceTrickDispel.class, LibPieceNames.TRICK_DISPEL, LibPieceGroups.MISC_TRICKS);
     }
 
     public static PieceContainer register(Class<? extends SpellPiece> clazz, String name, String group) {
