@@ -22,6 +22,9 @@ public class PieceTrickNullifyDefense extends PieceTrick {
     @Override
     public void addToMetadata(SpellMetadata meta) throws SpellCompilationException {
         super.addToMetadata(meta);
+
+        meta.addStat(EnumSpellStat.POTENCY, 60);
+        meta.addStat(EnumSpellStat.COST,  170);
     }
 
     @Override
