@@ -1,0 +1,22 @@
+{
+  "itemGroup.psi_oddities": "Psi Oddities",
+  "psi_oddities.not_enough_psi": "因果律强制执行：Psi能量不足，无法满足法术需求。",
+  "item.psi_oddities.cad_battery_the_dirac_sanction": "狄拉克制裁",
+  "item.psi_oddities.flux_drive": "通量驱动器",
+  "attributes.psi_oddities.max_psi": "最大Psi能量",
+  "attributes.psi_oddities.regen_psi": "Psi能量恢复速度",
+  "psi_oddities.spellpiece.trick_attack": "启动式：攻击",
+  "psi_oddities.spellpiece.trick_attack.desc": "攻击目标实体",
+  "psi_oddities.spellpiece.trick_nullify_defense": "启动式：防御无效化",
+  "psi_oddities.spellpiece.trick_nullify_defense.desc": "去除目标的无敌时间",
+  "psi_oddities.spellpiece.operator_entity_foodlevel": "运算符：饥饿值",
+  "psi_oddities.spellpiece.operator_entity_foodlevel.desc": "获取实体当前的饥饿值",
+  "psi_oddities.spellpiece.operator_entity_saturation": "运算符：饱和度",
+  "psi_oddities.spellpiece.operator_entity_saturation.desc": "获取实体当前的饱和度",
+  "psi_oddities.spellpiece.trick_saturation": "启动式：饱和",
+  "psi_oddities.spellpiece.trick_saturation.desc": "施加饱和效果",
+  "psi_oddities.spellpiece.trick_caster_blink": "启动式：施法者闪现",
+  "psi_oddities.spellpiece.trick_caster_blink.desc": "将施法者向指定方向传送",
+  "psi_oddities.spellpiece.trick_dispel": "启动式：驱散",
+  "psi_oddities.spellpiece.trick_dispel.desc": "移除目标身上的所有药水效果。"
+}
