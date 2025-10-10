@@ -3,7 +3,6 @@ package com.zhichaoxi.psi_oddities.event;
 import com.zhichaoxi.psi_oddities.PsiOddities;
 import com.zhichaoxi.psi_oddities.attribute.base.ModAttributes;
 import com.zhichaoxi.psi_oddities.item.base.ModItems;
-import com.zhichaoxi.psi_oddities.util.FluxDriveUtil;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -12,17 +11,12 @@ import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.energy.IEnergyStorage;
 import net.neoforged.neoforge.event.ItemAttributeModifierEvent;
-import vazkii.psi.api.PsiAPI;
 import vazkii.psi.api.cad.EnumCADComponent;
 import vazkii.psi.api.cad.ICAD;
 import vazkii.psi.api.internal.IPlayerData;
 import vazkii.psi.api.spell.PreSpellCastEvent;
-import vazkii.psi.common.core.handler.PlayerDataHandler;
 import vazkii.psi.common.item.armor.*;
-
-import java.util.ArrayList;
 
 @EventBusSubscriber(modid = PsiOddities.MODID)
 public class Handler {
@@ -37,9 +31,9 @@ public class Handler {
             return;
         }
         ItemStack assembly = cadItem.getComponentInSlot(cad, EnumCADComponent.BATTERY);
-        if(!assembly.isEmpty() && assembly.getItem() == ModItems.cadBatteryFlux) {
+        if(!assembly.isEmpty() && assembly.getItem() == ModItems.cadBatteryTheDiracSanction) {
             if (player instanceof ServerPlayer) {
-                event.setCancellationMessage("psi_oddities.not_enough_energy");
+                event.setCancellationMessage("psi_oddities.not_enough_psi");
             } else {
                 event.setCancellationMessage("");
             }

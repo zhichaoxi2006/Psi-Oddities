@@ -21,9 +21,9 @@ public class PsiOdditiesCreativeTab {
     public static void register(RegisterEvent evt) {
         evt.register(Registries.CREATIVE_MODE_TAB, creativeModeTabRegisterHelper -> {
             CreativeModeTab psiCreativeTab = CreativeModeTab.builder().title(Component.translatable("itemGroup.psi_oddities"))
-                    .icon(() -> new ItemStack(ModItems.cadBatteryFlux))
+                    .icon(() -> new ItemStack(ModItems.cadBatteryTheDiracSanction))
                     .displayItems((parameters, output) -> {
-                        output.accept(ModItems.cadBatteryFlux);
+                        output.accept(ModItems.cadBatteryTheDiracSanction);
                         output.accept(ModItems.fluxDrive);
                     })
                     .build();

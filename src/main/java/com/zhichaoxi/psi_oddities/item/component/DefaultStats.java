@@ -19,7 +19,7 @@ public class DefaultStats {
 
     public static void registerBatteryStats() {
         // Flux
-        ItemCADComponent.addStatToStack(ModItems.cadBatteryFlux, EnumCADStat.OVERFLOW, 50);
+        ItemCADComponent.addStatToStack(ModItems.cadBatteryTheDiracSanction, EnumCADStat.OVERFLOW, 50);
     }
 
     @SubscribeEvent
@@ -27,7 +27,7 @@ public class DefaultStats {
         ItemStack cad = event.getCad();
         ICAD cadItem = (ICAD) cad.getItem();
         ItemStack assembly = cadItem.getComponentInSlot(cad, EnumCADComponent.BATTERY);
-        if(!assembly.isEmpty() && assembly.getItem() == ModItems.cadBatteryFlux) {
+        if(!assembly.isEmpty() && assembly.getItem() == ModItems.cadBatteryTheDiracSanction) {
             if (event.getStat() == EnumCADStat.POTENCY) {
                 event.setStatValue(-1);
             }

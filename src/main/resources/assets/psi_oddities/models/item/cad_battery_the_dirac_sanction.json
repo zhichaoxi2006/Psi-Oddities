@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "psi_oddities:item/cad_battery_the_dirac_sanction"
+  }
+}

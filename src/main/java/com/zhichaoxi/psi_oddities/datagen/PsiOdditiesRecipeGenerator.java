@@ -12,7 +12,6 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.world.item.Items;
 import org.jetbrains.annotations.NotNull;
-import vazkii.psi.common.lib.ModTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -26,7 +25,7 @@ public class PsiOdditiesRecipeGenerator extends RecipeProvider {
 
         Criterion<InventoryChangeTrigger.TriggerInstance> hasNetherStar = has(Items.NETHER_STAR);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.cadBatteryFlux)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.cadBatteryTheDiracSanction)
                 .define('N', Items.NETHER_STAR)
                 .define('I', vazkii.psi.common.item.base.ModItems.cadAssemblyPsimetal)
                 .define('W', vazkii.psi.common.item.base.ModItems.ebonyPsimetal)
