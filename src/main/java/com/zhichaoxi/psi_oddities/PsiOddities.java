@@ -1,6 +1,7 @@
 package com.zhichaoxi.psi_oddities;
 
 import com.zhichaoxi.psi_oddities.attribute.base.ModAttributes;
+import com.zhichaoxi.psi_oddities.component.ModComponents;
 import com.zhichaoxi.psi_oddities.item.component.DefaultStats;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
@@ -14,7 +15,8 @@ public class PsiOddities {
 
     public PsiOddities(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
-        ModAttributes.ATTRIBUTES.register(modEventBus);
+        ModAttributes.DR.register(modEventBus);
+        ModComponents.DR.register(modEventBus);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {

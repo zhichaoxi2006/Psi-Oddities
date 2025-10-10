@@ -24,6 +24,7 @@ public class PsiOdditiesCreativeTab {
                     .icon(() -> new ItemStack(ModItems.cadBatteryFlux))
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.cadBatteryFlux);
+                        output.accept(ModItems.fluxDrive);
                     })
                     .build();
             creativeModeTabRegisterHelper.register(PSI_ODDITIES_CREATIVE_TAB, psiCreativeTab);

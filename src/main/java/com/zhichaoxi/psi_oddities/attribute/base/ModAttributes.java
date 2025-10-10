@@ -15,20 +15,20 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 @EventBusSubscriber(modid = PsiOddities.MODID)
 public class ModAttributes {
 
-    public static final DeferredRegister<Attribute> ATTRIBUTES = DeferredRegister.create(
+    public static final DeferredRegister<Attribute> DR = DeferredRegister.create(
             BuiltInRegistries.ATTRIBUTE, PsiOddities.MODID);
 
     public static Holder<Attribute> MAX_PSI;
     public static Holder<Attribute> REGEN_PSI;
 
     static {
-        MAX_PSI = ATTRIBUTES.register(LibAttributeNames.MAX_PSI, () -> new RangedAttribute(
-                "attributes.psi_oddities.total_psi",
+        MAX_PSI = DR.register(LibAttributeNames.MAX_PSI, () -> new RangedAttribute(
+                "attributes.psi_oddities.max_psi",
                 0,
                 -1000000,
                 1000000
         ).setSyncable(true));
-        REGEN_PSI = ATTRIBUTES.register(LibAttributeNames.REGEN_PSI, () -> new RangedAttribute(
+        REGEN_PSI = DR.register(LibAttributeNames.REGEN_PSI, () -> new RangedAttribute(
                 "attributes.psi_oddities.regen_psi",
                 0,
                 -1000000,

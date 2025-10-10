@@ -1,6 +1,9 @@
 {
   "itemGroup.psi_oddities": "Psi Oddities",
   "item.psi_oddities.cad_battery_flux": "Flux CAD Battery",
+  "item.psi_oddities.flux_drive": "Flux Drive",
+  "attributes.psi_oddities.max_psi": "Max Psi",
+  "attributes.psi_oddities.regen_psi": "Psi Regen Speed",
   "psi_oddities.spellpiece.trick_attack": "Trick: Attack",
   "psi_oddities.spellpiece.trick_attack.desc": "Attack target Entity",
   "psi_oddities.spellpiece.trick_nullify_defense": "Trick: Nullify Defense",
