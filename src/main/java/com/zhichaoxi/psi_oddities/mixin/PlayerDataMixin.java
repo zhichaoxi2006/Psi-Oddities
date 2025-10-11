@@ -22,8 +22,10 @@ public abstract class PlayerDataMixin {
 
     @Shadow public abstract void deductPsi(int psi, int cd, boolean sync, boolean shatter);
 
+    @Final
     @Shadow public int totalPsi;
 
+    @Final
     @Shadow public int regen;
 
     @Shadow public int availablePsi;
