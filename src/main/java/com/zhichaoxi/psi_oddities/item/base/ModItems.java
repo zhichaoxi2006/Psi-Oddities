@@ -22,8 +22,6 @@ public final class ModItems {
             cadBatteryTheDiracSanction = new ItemCADBattery(defaultBuilder());
             fluxDrive = new ItemFluxDrive(defaultBuilder());
 
-            ModSpellPieces.init();
-
             helper.register(PsiOddities.location(LibItemNames.CAD_BATTERY_THE_DIRAC_SANCTION), cadBatteryTheDiracSanction);
             helper.register(PsiOddities.location(LibItemNames.FLUX_DRIVE), fluxDrive);
         });

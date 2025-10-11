@@ -2,52 +2,60 @@ package com.zhichaoxi.psi_oddities.spell;
 
 import com.zhichaoxi.psi_oddities.PsiOddities;
 import com.zhichaoxi.psi_oddities.lib.LibPieceNames;
-import com.zhichaoxi.psi_oddities.spell.operator.entity.PieceOperatorEntityFoodLevel;
-import com.zhichaoxi.psi_oddities.spell.operator.entity.PieceOperatorEntitySaturation;
+import com.zhichaoxi.psi_oddities.spell.selector.entity.PieceSelectorSavedEntity;
 import com.zhichaoxi.psi_oddities.spell.trick.blink.PieceTrickCasterBlink;
 import com.zhichaoxi.psi_oddities.spell.trick.entity.PieceTrickAttack;
 import com.zhichaoxi.psi_oddities.spell.trick.entity.PieceTrickDispel;
 import com.zhichaoxi.psi_oddities.spell.trick.entity.PieceTrickNullifyDefense;
-import com.zhichaoxi.psi_oddities.spell.trick.potion.PieceTrickSaturation;
-import net.minecraft.resources.ResourceLocation;
+import com.zhichaoxi.psi_oddities.spell.trick.entity.PieceTrickSaveEntity;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
 import vazkii.psi.api.PsiAPI;
-import vazkii.psi.api.spell.Spell;
 import vazkii.psi.api.spell.SpellPiece;
 import vazkii.psi.common.lib.LibPieceGroups;
 
+import java.util.Arrays;
+import java.util.Collection;
+
 public final class ModSpellPieces {
 
-    public static PieceContainer operatorEntityFoodLevel;
-    public static PieceContainer operatorEntitySaturation;
+    public static final DeferredRegister<Class<? extends SpellPiece>> SPELL_PIECES =
+            DeferredRegister.create(PsiAPI.SPELL_PIECE_REGISTRY_TYPE_KEY, PsiOddities.MODID);
+    public static final DeferredRegister<Collection<Class<? extends SpellPiece>>> ADVANCEMENT_GROUPS =
+            DeferredRegister.create(PsiAPI.ADVANCEMENT_GROUP_REGISTRY_KEY, PsiOddities.MODID);
 
-    public static PieceContainer trickAttack;
-    public static PieceContainer trickNullifyDefense;
-    public static PieceContainer trickSaturation;
-    public static PieceContainer trickCasterBlink;
-    public static PieceContainer trickDispel;
+    // ========== MEMORY MANAGEMENT ==========
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceSelectorSavedEntity>> SELECTOR_SAVED_ENTITY =
+            SPELL_PIECES.register(LibPieceNames.SELECTOR_SAVED_ENTITY, () -> PieceSelectorSavedEntity.class);
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickSaveEntity>> TRICK_SAVE_ENTITY =
+            SPELL_PIECES.register(LibPieceNames.TRICK_SAVE_ENTITY, () -> PieceTrickSaveEntity.class);
 
-    public static void init() {
-        operatorEntityFoodLevel = register(PieceOperatorEntityFoodLevel.class, LibPieceNames.OPERATOR_ENTITY_FOODLEVEL, LibPieceGroups.SECONDARY_OPERATORS);
-        operatorEntitySaturation = register(PieceOperatorEntitySaturation.class, LibPieceNames.OPERATOR_ENTITY_SATURATION, LibPieceGroups.SECONDARY_OPERATORS);
+    public static final DeferredHolder<Collection<Class<? extends SpellPiece>>, Collection<Class<? extends SpellPiece>>> MEMORY_MANAGEMENT =
+            ADVANCEMENT_GROUPS.register(LibPieceGroups.MEMORY_MANAGEMENT,
+                    () -> Arrays.asList(
+                            PieceSelectorSavedEntity.class,
+                            PieceTrickSaveEntity.class
+                    ));
 
-        trickAttack = register(PieceTrickAttack.class, LibPieceNames.TRICK_ATTACK, LibPieceGroups.MISC_TRICKS);
-        trickNullifyDefense = register(PieceTrickNullifyDefense.class, LibPieceNames.TRICK_NULLIFY_DEFENSE, LibPieceGroups.MISC_TRICKS);
-        trickSaturation = register(PieceTrickSaturation.class, LibPieceNames.TRICK_SATURATION, LibPieceGroups.POSITIVE_EFFECTS);
-        trickCasterBlink = register(PieceTrickCasterBlink.class, LibPieceNames.TRICK_CASTER_BLINK, LibPieceGroups.MOVEMENT);
-        trickDispel = register(PieceTrickDispel.class, LibPieceNames.TRICK_DISPEL, LibPieceGroups.MISC_TRICKS);
-    }
+    // ========== COMBAT MAGIC  ==========
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickAttack>> TRICK_ATTACK =
+                SPELL_PIECES.register(LibPieceNames.TRICK_ATTACK, () -> PieceTrickAttack.class);
 
-    public static PieceContainer register(Class<? extends SpellPiece> clazz, String name, String group) {
-        return register(clazz, name, group, false);
-    }
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickNullifyDefense>> TRICK_NULLIFY_DEFENSE =
+            SPELL_PIECES.register(LibPieceNames.TRICK_NULLIFY_DEFENSE, () -> PieceTrickNullifyDefense.class);
 
-    public static PieceContainer register(Class<? extends SpellPiece> clazz, String name, String group, boolean main) {
-        PsiAPI.registerSpellPieceAndTexture(ResourceLocation.fromNamespaceAndPath(PsiOddities.MODID, name), clazz);
-        PsiAPI.addPieceToGroup(clazz, ResourceLocation.fromNamespaceAndPath(PsiOddities.MODID, group), main);
-        return (Spell s) -> SpellPiece.create(clazz, s);
-    }
+    public static final DeferredHolder<Collection<Class<? extends SpellPiece>>, Collection<Class<? extends SpellPiece>>> COMBAT_MAGIC =
+            ADVANCEMENT_GROUPS.register(com.zhichaoxi.psi_oddities.lib.LibPieceGroups.COMBAT_MAGIC,
+                    () -> Arrays.asList(
+                            PieceTrickAttack.class,
+                            PieceTrickNullifyDefense.class
+                    ));
 
-    public interface PieceContainer {
-        SpellPiece get(Spell s);
-    }
+    // ========== MISC ==========
+
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickCasterBlink>> TRICK_CASTER_BLINK =
+            SPELL_PIECES.register(LibPieceNames.TRICK_CASTER_BLINK, () -> PieceTrickCasterBlink.class);
+
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickDispel>> TRICK_DISPEL =
+            SPELL_PIECES.register(LibPieceNames.TRICK_DISPEL, () -> PieceTrickDispel.class);
 }

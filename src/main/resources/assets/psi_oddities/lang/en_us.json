@@ -18,5 +18,9 @@
   "psi_oddities.spellpiece.trick_caster_blink": "Trick: Caster Blink",
   "psi_oddities.spellpiece.trick_caster_blink.desc": "Teleports the caster in the given direction",
   "psi_oddities.spellpiece.trick_dispel": "Trick: Dispel",
-  "psi_oddities.spellpiece.trick_dispel.desc": "Removes any potion effects on the target."
+  "psi_oddities.spellpiece.trick_dispel.desc": "Removes any potion effects on the target.",
+  "psi_oddities.spellpiece.trick_save_entity": "Trick: Save Entity",
+  "psi_oddities.spellpiece.trick_save_entity.desc": "Saves an entity to CAD Memory",
+  "psi_oddities.spellpiece.selector_saved_entity": "Selector: Saved Entity",
+  "psi_oddities.spellpiece.selector_saved_entity.desc": "Selects a saved entity from CAD Memory"
 }

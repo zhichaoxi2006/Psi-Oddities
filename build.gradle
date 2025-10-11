@@ -16,6 +16,7 @@ repositories {
         url "https://maven.blamejared.com/"
         content {
             includeGroup "vazkii.patchouli"
+            includeGroup "vazkii.psi"
             includeGroup "mezz.jei"
         }
     }
@@ -120,7 +121,9 @@ dependencies {
     compileOnly "vazkii.patchouli:Patchouli:${patchouli_version}-NEOFORGE:api"
     runtimeOnly "vazkii.patchouli:Patchouli:${patchouli_version}-NEOFORGE"
 
-    implementation "curse.maven:psi-241665:6815563"
+    implementation "vazkii.psi:psi:${psi_version}"
+
+    runtimeOnly("curse.maven:mekanism-268560:7017663")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

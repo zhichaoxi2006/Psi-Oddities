@@ -27,9 +27,9 @@ public class PsiOdditiesRecipeGenerator extends RecipeProvider {
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.cadBatteryTheDiracSanction)
                 .define('N', Items.NETHER_STAR)
-                .define('I', vazkii.psi.common.item.base.ModItems.cadAssemblyPsimetal)
-                .define('W', vazkii.psi.common.item.base.ModItems.ebonyPsimetal)
-                .define('B', vazkii.psi.common.item.base.ModItems.ivoryPsimetal)
+                .define('I', vazkii.psi.common.item.base.ModItems.psimetal.get())
+                .define('W', vazkii.psi.common.item.base.ModItems.ebonyPsimetal.get())
+                .define('B', vazkii.psi.common.item.base.ModItems.ivoryPsimetal.get())
                 .pattern(" W ")
                 .pattern("INI")
                 .pattern(" B ")

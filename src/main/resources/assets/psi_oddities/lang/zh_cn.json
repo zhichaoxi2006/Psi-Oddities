@@ -18,5 +18,9 @@
   "psi_oddities.spellpiece.trick_caster_blink": "启动式：施法者闪现",
   "psi_oddities.spellpiece.trick_caster_blink.desc": "将施法者向指定方向传送",
   "psi_oddities.spellpiece.trick_dispel": "启动式：驱散",
-  "psi_oddities.spellpiece.trick_dispel.desc": "移除目标身上的所有药水效果。"
+  "psi_oddities.spellpiece.trick_dispel.desc": "移除目标身上的所有药水效果。",
+  "psi_oddities.spellpiece.trick_save_entity": "Trick: Save Entity",
+  "psi_oddities.spellpiece.trick_save_entity.desc": "Saves an entity to CAD Memory",
+  "psi_oddities.spellpiece.selector_saved_entity": "Selector: Saved Entity",
+  "psi_oddities.spellpiece.selector_saved_entity.desc": "Selects a saved entity from CAD Memory"
 }
