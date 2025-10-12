@@ -3,6 +3,8 @@ package com.zhichaoxi.psi_oddities.spell.selector;
 import vazkii.psi.api.spell.*;
 import vazkii.psi.api.spell.piece.PieceSelector;
 
+import java.util.Objects;
+
 public class PieceSelectorRecursionDepth extends PieceSelector {
     public PieceSelectorRecursionDepth(Spell spell) {
         super(spell);
@@ -20,13 +22,9 @@ public class PieceSelectorRecursionDepth extends PieceSelector {
     }
 
     @Override
-    public Object execute(SpellContext context) throws SpellRuntimeException {
+    public Object execute(SpellContext context) {
         Object object = context.customData.get("cast_depth");
-        if (object != null) {
-            return object;
-        } else {
-            return 0;
-        }
+        return Objects.requireNonNullElse(object, 0);
     }
 
     @Override

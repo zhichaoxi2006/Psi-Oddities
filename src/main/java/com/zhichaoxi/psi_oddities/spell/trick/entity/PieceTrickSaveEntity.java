@@ -12,7 +12,6 @@ import vazkii.psi.api.spell.piece.PieceTrick;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.UUID;
 
 public class PieceTrickSaveEntity extends PieceTrick {
@@ -42,13 +41,6 @@ public class PieceTrickSaveEntity extends PieceTrick {
             throw new SpellCompilationException(SpellCompilationException.NON_POSITIVE_INTEGER, x, y);
         }
         meta.addStat(EnumSpellStat.POTENCY, numberVal.intValue() * 8);
-    }
-
-    protected static void initUUIDList(ItemStack cadStack) {
-        List<UUID> list = cadStack.get(ModComponents.STORED_ENTITY);
-        if (list == null) {
-            cadStack.set(ModComponents.STORED_ENTITY, new ArrayList<>());
-        }
     }
 
     public static List<UUID> getUUIDList(ItemStack cadStack) {

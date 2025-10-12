@@ -4,6 +4,7 @@
   "psi_oddities.not_enough_psi": "CAUSALITY ENFORCED: Insufficient Psi to satisfy the spell requirements.",
   "item.psi_oddities.cad_battery_the_dirac_sanction": "The Dirac Sanction",
   "item.psi_oddities.flux_drive": "Flux Drive",
+  "item.psi_oddities.psimetal_shield": "Psimetal Shield",
   "attributes.psi_oddities.max_psi": "Max Psi",
   "attributes.psi_oddities.regen_psi": "Psi Regen Speed",
   "psi_oddities.spellpiece.trick_attack": "Trick: Attack",
