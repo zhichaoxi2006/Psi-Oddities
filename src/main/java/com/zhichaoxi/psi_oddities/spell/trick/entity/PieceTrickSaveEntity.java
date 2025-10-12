@@ -49,7 +49,7 @@ public class PieceTrickSaveEntity extends PieceTrick {
 
     public static List<UUID> setUUID(List<UUID> list, int index, UUID uuid) {
         while (list.size() <= index) {
-            list.add(null);
+            list.add(UUID.fromString("00000000-0000-0000-0000-000000000000"));
         }
         list.set(index, uuid);
         return list;
@@ -61,8 +61,12 @@ public class PieceTrickSaveEntity extends PieceTrick {
         int numberVal = this.getParamValue(context, number).intValue();
         int n = numberVal - 1;
         ItemStack cadStack = PsiAPI.getPlayerCAD(context.caster);
-        if(cadStack == null || !(cadStack.getItem() instanceof ICAD)) {
+        if(cadStack == null || !(cadStack.getItem() instanceof ICAD cad)) {
             throw new SpellRuntimeException(SpellRuntimeException.NO_CAD);
+        }
+
+        if (n >= cad.getMemorySize(cadStack)) {
+            throw new SpellRuntimeException(SpellRuntimeException.MEMORY_OUT_OF_BOUNDS);
         }
 
         context.verifyEntity(targetVal);

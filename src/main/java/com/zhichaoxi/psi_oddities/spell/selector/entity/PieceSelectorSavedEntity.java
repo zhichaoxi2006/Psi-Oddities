@@ -52,6 +52,10 @@ public class PieceSelectorSavedEntity extends PieceSelector {
             throw new SpellRuntimeException(SpellRuntimeException.NO_CAD);
         }
 
+        if (n >= cad.getMemorySize(cadStack)) {
+            throw new SpellRuntimeException(SpellRuntimeException.MEMORY_OUT_OF_BOUNDS);
+        }
+
         List<UUID> list = cadStack.get(ModComponents.STORED_ENTITY);
         if (list != null) {
             UUID uuid = list.get(n);
