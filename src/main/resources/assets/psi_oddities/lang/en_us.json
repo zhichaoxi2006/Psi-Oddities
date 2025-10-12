@@ -1,6 +1,7 @@
 {
   "itemGroup.psi_oddities": "Psi Oddities",
   "psi_oddities.spellerror.stack_overflow": "ERROR: Stack Overflow",
+  "psi_oddities.spellerror.cast_failed": "ERROR: Cast Failed",
   "psi_oddities.not_enough_psi": "CAUSALITY ENFORCED: Insufficient Psi to satisfy the spell requirements.",
   "item.psi_oddities.cad_battery_the_dirac_sanction": "The Dirac Sanction",
   "item.psi_oddities.flux_drive": "Flux Drive",

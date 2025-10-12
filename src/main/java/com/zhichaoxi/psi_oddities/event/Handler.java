@@ -3,6 +3,8 @@ package com.zhichaoxi.psi_oddities.event;
 import com.zhichaoxi.psi_oddities.PsiOddities;
 import com.zhichaoxi.psi_oddities.attribute.base.ModAttributes;
 import com.zhichaoxi.psi_oddities.item.base.ModItems;
+import com.zhichaoxi.psi_oddities.util.FluxDriveUtil;
+import com.zhichaoxi.psi_oddities.util.PsiUtil;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -26,8 +28,11 @@ public class Handler {
         Player player = event.getPlayer();
         ItemStack cad = event.getCad();
         ICAD cadItem = (ICAD) cad.getItem();
-        IPlayerData data = event.getPlayerData();
-        if (event.getCost() < data.getAvailablePsi()) {
+        int cost = event.getCost();
+
+        int availablePsi = PsiUtil.getRealAvailablePsi(player);
+
+        if (cost < availablePsi) {
             return;
         }
         ItemStack assembly = cadItem.getComponentInSlot(cad, EnumCADComponent.BATTERY);

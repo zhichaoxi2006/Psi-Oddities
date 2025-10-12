@@ -59,8 +59,11 @@ public class PieceTrickCast extends PieceTrick {
         ISocketable socket = cadStack.getCapability(PsiAPI.SOCKETABLE_CAPABILITY);
         if (socket != null) {
             ItemStack bullet = socket.getBulletInSocket(slot);
-            ItemCAD.cast(caster.level(), caster, data, bullet, cadStack, 40, 25, 0.5F,
-                    ctx -> ctx.customData.put("cast_depth", cast_depth + 1) );
+            boolean did = ItemCAD.cast(caster.level(), caster, data, bullet, cadStack, 0, 25, 0.5F,
+                    ctx -> ctx.customData.put("cast_depth", cast_depth + 1) ).isPresent();
+            if (!did) {
+                throw new SpellRuntimeException(ErrorUtil.CAST_FAILED);
+            }
         }
 
         return null;
