@@ -2,7 +2,9 @@ package com.zhichaoxi.psi_oddities.spell;
 
 import com.zhichaoxi.psi_oddities.PsiOddities;
 import com.zhichaoxi.psi_oddities.lib.LibPieceNames;
+import com.zhichaoxi.psi_oddities.spell.selector.PieceSelectorRecursionDepth;
 import com.zhichaoxi.psi_oddities.spell.selector.entity.PieceSelectorSavedEntity;
+import com.zhichaoxi.psi_oddities.spell.trick.PieceTrickCast;
 import com.zhichaoxi.psi_oddities.spell.trick.blink.PieceTrickCasterBlink;
 import com.zhichaoxi.psi_oddities.spell.trick.entity.PieceTrickAttack;
 import com.zhichaoxi.psi_oddities.spell.trick.entity.PieceTrickDispel;
@@ -39,7 +41,7 @@ public final class ModSpellPieces {
 
     // ========== COMBAT MAGIC  ==========
     public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickAttack>> TRICK_ATTACK =
-                SPELL_PIECES.register(LibPieceNames.TRICK_ATTACK, () -> PieceTrickAttack.class);
+            SPELL_PIECES.register(LibPieceNames.TRICK_ATTACK, () -> PieceTrickAttack.class);
 
     public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickNullifyDefense>> TRICK_NULLIFY_DEFENSE =
             SPELL_PIECES.register(LibPieceNames.TRICK_NULLIFY_DEFENSE, () -> PieceTrickNullifyDefense.class);
@@ -58,4 +60,19 @@ public final class ModSpellPieces {
 
     public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickDispel>> TRICK_DISPEL =
             SPELL_PIECES.register(LibPieceNames.TRICK_DISPEL, () -> PieceTrickDispel.class);
+
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickCast>> TRICK_CAST =
+            SPELL_PIECES.register(LibPieceNames.TRICK_CAST, () -> PieceTrickCast.class);
+
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceSelectorRecursionDepth>> SELECTOR_RECURSION_DEPTH =
+            SPELL_PIECES.register(LibPieceNames.SELECTOR_RECURSION_DEPTH, () -> PieceSelectorRecursionDepth.class);
+
+    public static final DeferredHolder<Collection<Class<? extends SpellPiece>>, Collection<Class<? extends SpellPiece>>> MISC =
+            ADVANCEMENT_GROUPS.register(LibPieceGroups.MISC_TRICKS,
+                    () -> Arrays.asList(
+                            PieceTrickCasterBlink.class,
+                            PieceTrickDispel.class,
+                            PieceTrickCast.class,
+                            PieceSelectorRecursionDepth.class
+                    ));
 }

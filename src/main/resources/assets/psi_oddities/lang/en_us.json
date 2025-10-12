@@ -1,5 +1,6 @@
 {
   "itemGroup.psi_oddities": "Psi Oddities",
+  "psi_oddities.spellerror.stack_overflow": "ERROR: Stack Overflow",
   "psi_oddities.not_enough_psi": "CAUSALITY ENFORCED: Insufficient Psi to satisfy the spell requirements.",
   "item.psi_oddities.cad_battery_the_dirac_sanction": "The Dirac Sanction",
   "item.psi_oddities.flux_drive": "Flux Drive",
@@ -22,5 +23,9 @@
   "psi_oddities.spellpiece.trick_save_entity": "Trick: Save Entity",
   "psi_oddities.spellpiece.trick_save_entity.desc": "Saves an entity to CAD Memory",
   "psi_oddities.spellpiece.selector_saved_entity": "Selector: Saved Entity",
-  "psi_oddities.spellpiece.selector_saved_entity.desc": "Selects a saved entity from CAD Memory"
+  "psi_oddities.spellpiece.selector_saved_entity.desc": "Selects a saved entity from CAD Memory",
+  "psi_oddities.spellpiece.trick_cast": "Trick: Cast",
+  "psi_oddities.spellpiece.trick_cast.desc": "Cast the bullet in CAD",
+  "psi_oddities.spellpiece.selector_recursion_depth": "Selector: Recursion Depth",
+  "psi_oddities.spellpiece.selector_recursion_depth.desc": "Selects the CAD's recursion depth "
 }

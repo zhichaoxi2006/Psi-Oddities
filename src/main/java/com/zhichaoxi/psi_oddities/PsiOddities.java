@@ -1,10 +1,12 @@
 package com.zhichaoxi.psi_oddities;
 
 import com.zhichaoxi.psi_oddities.attribute.base.ModAttributes;
+import com.zhichaoxi.psi_oddities.client.render.spell.SpellPieceMaterial;
 import com.zhichaoxi.psi_oddities.component.ModComponents;
 import com.zhichaoxi.psi_oddities.item.component.DefaultStats;
 import com.zhichaoxi.psi_oddities.spell.ModSpellPieces;
 import net.minecraft.resources.ResourceLocation;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -14,12 +16,15 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 public class PsiOddities {
     public static final String MODID = "psi_oddities";
 
-    public PsiOddities(IEventBus modEventBus, ModContainer modContainer) {
+    public PsiOddities(IEventBus modEventBus, Dist dist, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
         ModAttributes.DR.register(modEventBus);
         ModComponents.DR.register(modEventBus);
         ModSpellPieces.SPELL_PIECES.register(modEventBus);
         ModSpellPieces.ADVANCEMENT_GROUPS.register(modEventBus);
+        if (dist.isClient()) {
+            SpellPieceMaterial.SPELL_PIECE_MATERIAL.register(modEventBus);
+        }
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {

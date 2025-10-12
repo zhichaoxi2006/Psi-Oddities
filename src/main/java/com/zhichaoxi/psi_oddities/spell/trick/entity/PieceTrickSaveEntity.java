@@ -56,7 +56,7 @@ public class PieceTrickSaveEntity extends PieceTrick {
     }
 
     public static List<UUID> setUUID(List<UUID> list, int index, UUID uuid) {
-        while (list.size() < index) {
+        while (list.size() <= index) {
             list.add(null);
         }
         list.set(index, uuid);
