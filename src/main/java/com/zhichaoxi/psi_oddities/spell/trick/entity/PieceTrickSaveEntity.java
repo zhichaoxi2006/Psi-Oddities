@@ -2,7 +2,9 @@ package com.zhichaoxi.psi_oddities.spell.trick.entity;
 
 import com.zhichaoxi.psi_oddities.component.ModComponents;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.boss.EnderDragonPart;
 import net.minecraft.world.item.ItemStack;
+import net.neoforged.neoforge.entity.PartEntity;
 import vazkii.psi.api.PsiAPI;
 import vazkii.psi.api.cad.ICAD;
 import vazkii.psi.api.spell.*;
@@ -15,6 +17,8 @@ import java.util.List;
 import java.util.UUID;
 
 public class PieceTrickSaveEntity extends PieceTrick {
+
+    private static final UUID EMPTY_UUID = UUID.fromString("00000000-0000-0000-0000-000000000000");
 
     SpellParam<Number> number;
     SpellParam<Entity> target;
@@ -49,7 +53,7 @@ public class PieceTrickSaveEntity extends PieceTrick {
 
     public static List<UUID> setUUID(List<UUID> list, int index, UUID uuid) {
         while (list.size() <= index) {
-            list.add(UUID.fromString("00000000-0000-0000-0000-000000000000"));
+            list.add(EMPTY_UUID);
         }
         list.set(index, uuid);
         return list;
@@ -71,8 +75,14 @@ public class PieceTrickSaveEntity extends PieceTrick {
 
         context.verifyEntity(targetVal);
         List<UUID> list = new ArrayList<>(getUUIDList(cadStack));
-        cadStack.set(ModComponents.STORED_ENTITY,
-                setUUID(list, n, targetVal.getUUID()));
+        if (targetVal instanceof PartEntity<?> partEntity) {
+            Entity parent = partEntity.getParent();
+            cadStack.set(ModComponents.STORED_ENTITY,
+                    setUUID(list, n, parent.getUUID()));
+        } else {
+            cadStack.set(ModComponents.STORED_ENTITY,
+                    setUUID(list, n, targetVal.getUUID()));
+        }
 
         return null;
     }

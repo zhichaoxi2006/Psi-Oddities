@@ -3,6 +3,7 @@ package com.zhichaoxi.psi_oddities.spell.selector.entity;
 import com.zhichaoxi.psi_oddities.component.ModComponents;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import vazkii.psi.api.PsiAPI;

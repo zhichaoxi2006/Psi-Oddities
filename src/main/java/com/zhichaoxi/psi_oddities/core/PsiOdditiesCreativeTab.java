@@ -25,6 +25,7 @@ public class PsiOdditiesCreativeTab {
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.cadBatteryTheDiracSanction);
                         output.accept(ModItems.fluxDrive);
+                        output.accept(ModItems.psimetalShield);
                     })
                     .build();
             creativeModeTabRegisterHelper.register(PSI_ODDITIES_CREATIVE_TAB, psiCreativeTab);

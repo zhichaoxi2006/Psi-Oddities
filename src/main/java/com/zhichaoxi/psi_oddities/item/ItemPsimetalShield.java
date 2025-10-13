@@ -16,36 +16,8 @@ import vazkii.psi.common.core.handler.PlayerDataHandler;
 import vazkii.psi.common.item.ItemCAD;
 import vazkii.psi.common.item.tool.IPsimetalTool;
 
-@EventBusSubscriber(modid = PsiOddities.MODID)
 public class ItemPsimetalShield extends ShieldItem implements IPsimetalTool {
     public ItemPsimetalShield(Properties properties) {
         super(properties);
-    }
-
-    @SubscribeEvent(priority = EventPriority.LOWEST)
-    private static void onShieldBlocked(LivingShieldBlockEvent event) {
-        boolean blocked = event.getBlocked();
-        LivingEntity entity = event.getEntity();
-        LivingEntity source = (LivingEntity) event.getDamageSource().getEntity();
-        if (entity instanceof Player player) {
-            if (blocked) {
-                PlayerDataHandler.PlayerData data = PlayerDataHandler.get(player);
-                ItemStack playerCad = PsiAPI.getPlayerCAD(player);
-                ItemStack shieldStack = player.getUseItem();
-
-                if (!(shieldStack.getItem() instanceof ItemPsimetalShield)) {
-                    return;
-                }
-
-                if(!playerCad.isEmpty()) {
-                    ItemStack bullet = ISocketable.socketable(shieldStack).getSelectedBullet();
-                    ItemCAD.cast(player.getCommandSenderWorld(), player, data, bullet, playerCad, 5, 10, 0.05F,
-                            (SpellContext context) -> {
-                                context.attackingEntity = source;
-                                context.tool = shieldStack;
-                            });
-                }
-            }
-        }
     }
 }
