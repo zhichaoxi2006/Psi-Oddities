@@ -2,6 +2,8 @@ package com.zhichaoxi.psi_oddities.spell;
 
 import com.zhichaoxi.psi_oddities.PsiOddities;
 import com.zhichaoxi.psi_oddities.lib.LibPieceNames;
+import com.zhichaoxi.psi_oddities.spell.operator.math.PieceOperatorEqual;
+import com.zhichaoxi.psi_oddities.spell.operator.math.bitwise.*;
 import com.zhichaoxi.psi_oddities.spell.selector.PieceSelectorRecursionDepth;
 import com.zhichaoxi.psi_oddities.spell.selector.entity.PieceSelectorSavedEntity;
 import com.zhichaoxi.psi_oddities.spell.trick.PieceTrickCast;
@@ -26,7 +28,46 @@ public final class ModSpellPieces {
     public static final DeferredRegister<Collection<Class<? extends SpellPiece>>> ADVANCEMENT_GROUPS =
             DeferredRegister.create(PsiAPI.ADVANCEMENT_GROUP_REGISTRY_KEY, PsiOddities.MODID);
 
+    // ========== NUMBER INTRO ==========
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorEqual>> OPERATOR_EQUAL =
+            SPELL_PIECES.register(LibPieceNames.OPERATOR_EQUAL, () -> PieceOperatorEqual.class);
+
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorAnd>> OPERATOR_BIT_AND =
+            SPELL_PIECES.register(LibPieceNames.OPERATOR_BIT_AND, () -> PieceOperatorAnd.class);
+
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorLogicalRShift>> OPERATOR_BIT_LOGIC_SHR =
+            SPELL_PIECES.register(LibPieceNames.OPERATOR_BIT_LOGIC_SHR, () -> PieceOperatorLogicalRShift.class);
+
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorLShift>> OPERATOR_BIT_SHL =
+            SPELL_PIECES.register(LibPieceNames.OPERATOR_BIT_SHL, () -> PieceOperatorLShift.class);
+
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorNot>> OPERATOR_BIT_NOT =
+            SPELL_PIECES.register(LibPieceNames.OPERATOR_BIT_NOT, () -> PieceOperatorNot.class);
+
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorOr>> OPERATOR_OR =
+            SPELL_PIECES.register(LibPieceNames.OPERATOR_OR, () -> PieceOperatorOr.class);
+
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorRShift>> OPERATOR_BIT_SHR =
+            SPELL_PIECES.register(LibPieceNames.OPERATOR_BIT_SHR, () -> PieceOperatorRShift.class);
+
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorXor>> OPERATOR_BIT_XOR =
+            SPELL_PIECES.register(LibPieceNames.OPERATOR_BIT_XOR, () -> PieceOperatorXor.class);
+
+    public static final DeferredHolder<Collection<Class<? extends SpellPiece>>, Collection<Class<? extends SpellPiece>>> OPERATORS =
+            ADVANCEMENT_GROUPS.register(LibPieceGroups.NUMBERS_INTRO,  // 需在LibPieceGroups中定义OPERATORS常量
+                    () -> Arrays.asList(
+                            PieceOperatorEqual.class,
+                            PieceOperatorAnd.class,
+                            PieceOperatorLogicalRShift.class,
+                            PieceOperatorLShift.class,
+                            PieceOperatorNot.class,
+                            PieceOperatorOr.class,
+                            PieceOperatorLShift.class,
+                            PieceOperatorXor.class
+                    ));
+
     // ========== MEMORY MANAGEMENT ==========
+
     public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceSelectorSavedEntity>> SELECTOR_SAVED_ENTITY =
             SPELL_PIECES.register(LibPieceNames.SELECTOR_SAVED_ENTITY, () -> PieceSelectorSavedEntity.class);
     public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickSaveEntity>> TRICK_SAVE_ENTITY =
@@ -40,6 +81,7 @@ public final class ModSpellPieces {
                     ));
 
     // ========== COMBAT MAGIC  ==========
+
     public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickAttack>> TRICK_ATTACK =
             SPELL_PIECES.register(LibPieceNames.TRICK_ATTACK, () -> PieceTrickAttack.class);
 

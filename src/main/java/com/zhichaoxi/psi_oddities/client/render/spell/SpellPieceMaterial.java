@@ -16,38 +16,60 @@ public class SpellPieceMaterial {
 
     // ========== MEMORY MANAGEMENT ==========
     public static final DeferredHolder<Material, Material> SELECTOR_SAVED_ENTITY =
-            SPELL_PIECE_MATERIAL.register(LibPieceNames.SELECTOR_SAVED_ENTITY,
-                    () -> new Material(InventoryMenu.BLOCK_ATLAS, location(LibPieceNames.SELECTOR_SAVED_ENTITY)));
+            registerMaterial(LibPieceNames.SELECTOR_SAVED_ENTITY);
 
     public static final DeferredHolder<Material, Material> TRICK_SAVE_ENTITY =
-            SPELL_PIECE_MATERIAL.register(LibPieceNames.TRICK_SAVE_ENTITY,
-                    () -> new Material(InventoryMenu.BLOCK_ATLAS, location(LibPieceNames.TRICK_SAVE_ENTITY)));
+            registerMaterial(LibPieceNames.TRICK_SAVE_ENTITY);
 
     // ========== COMBAT MAGIC  ==========
     public static final DeferredHolder<Material, Material> TRICK_ATTACK =
-                SPELL_PIECE_MATERIAL.register(LibPieceNames.TRICK_ATTACK,
-                        () -> new Material(InventoryMenu.BLOCK_ATLAS, location(LibPieceNames.TRICK_ATTACK)));
+            registerMaterial(LibPieceNames.TRICK_ATTACK);
 
     public static final DeferredHolder<Material, Material> TRICK_NULLIFY_DEFENSE =
-            SPELL_PIECE_MATERIAL.register(LibPieceNames.TRICK_NULLIFY_DEFENSE,
-                    () -> new Material(InventoryMenu.BLOCK_ATLAS, location(LibPieceNames.TRICK_NULLIFY_DEFENSE)));
+            registerMaterial(LibPieceNames.TRICK_NULLIFY_DEFENSE);
+
+    // ========== NUMBER INTRO ==========
+    public static final DeferredHolder<Material, Material> PIECE_OPERATOR_EQUAL =
+            registerMaterial(LibPieceNames.OPERATOR_EQUAL);
+
+    public static final DeferredHolder<Material, Material> PIECE_OPERATOR_BIT_AND =
+            registerMaterial(LibPieceNames.OPERATOR_BIT_AND);
+
+    public static final DeferredHolder<Material, Material> PIECE_OPERATOR_BIT_LOGIC_SHR =
+            registerMaterial(LibPieceNames.OPERATOR_BIT_LOGIC_SHR);
+
+    public static final DeferredHolder<Material, Material> PIECE_OPERATOR_BIT_SHL =
+            registerMaterial(LibPieceNames.OPERATOR_BIT_SHL);
+
+    public static final DeferredHolder<Material, Material> PIECE_OPERATOR_BIT_NOT =
+            registerMaterial(LibPieceNames.OPERATOR_BIT_NOT);
+
+    public static final DeferredHolder<Material, Material> PIECE_OPERATOR_OR =
+            registerMaterial(LibPieceNames.OPERATOR_OR);
+
+    public static final DeferredHolder<Material, Material> PIECE_OPERATOR_BIT_SHR =
+            registerMaterial(LibPieceNames.OPERATOR_BIT_SHR);
+
+    public static final DeferredHolder<Material, Material> PIECE_OPERATOR_BIT_XOR =
+            registerMaterial(LibPieceNames.OPERATOR_BIT_XOR);
 
     // ========= MISC ==========
     public static final DeferredHolder<Material, Material> TRICK_DISPEL =
-            SPELL_PIECE_MATERIAL.register(LibPieceNames.TRICK_DISPEL,
-                    () -> new Material(InventoryMenu.BLOCK_ATLAS, location(LibPieceNames.TRICK_DISPEL)));
+            registerMaterial(LibPieceNames.TRICK_DISPEL);
 
     public static final DeferredHolder<Material, Material> TRICK_CASTER_BLINK =
-            SPELL_PIECE_MATERIAL.register(LibPieceNames.TRICK_CASTER_BLINK,
-                    () -> new Material(InventoryMenu.BLOCK_ATLAS, location(LibPieceNames.TRICK_CASTER_BLINK)));
+            registerMaterial(LibPieceNames.TRICK_CASTER_BLINK);
 
     public static final DeferredHolder<Material, Material> TRICK_CAST =
-            SPELL_PIECE_MATERIAL.register(LibPieceNames.TRICK_CAST,
-                    () -> new Material(InventoryMenu.BLOCK_ATLAS, location(LibPieceNames.TRICK_CAST)));
+            registerMaterial(LibPieceNames.TRICK_CAST);
 
     public static final DeferredHolder<Material, Material> SELECTOR_RECURSION_DEPTH =
-            SPELL_PIECE_MATERIAL.register(LibPieceNames.SELECTOR_RECURSION_DEPTH,
-                    () -> new Material(InventoryMenu.BLOCK_ATLAS, location(LibPieceNames.SELECTOR_RECURSION_DEPTH)));
+            registerMaterial(LibPieceNames.SELECTOR_RECURSION_DEPTH);
+
+    private static DeferredHolder<Material, Material> registerMaterial(String name) {
+        return SPELL_PIECE_MATERIAL.register(name,
+                () -> new Material(InventoryMenu.BLOCK_ATLAS, location(name)));
+    }
 
     private static ResourceLocation location(String string) {
         return PsiOddities.location("spell/" + string);

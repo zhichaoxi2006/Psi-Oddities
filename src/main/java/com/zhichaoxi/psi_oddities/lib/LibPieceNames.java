@@ -11,4 +11,14 @@ public final class LibPieceNames {
     public static final String SELECTOR_SAVED_ENTITY = "selector_saved_entity";
     public static final String SELECTOR_RECURSION_DEPTH = "selector_recursion_depth";
 
+
+    public static final String OPERATOR_EQUAL = "operator_equal";
+    public static final String OPERATOR_BIT_AND = "operator_bitwise_and";
+    public static final String OPERATOR_BIT_LOGIC_SHR = "operator_bitwise_logic_shr";
+    public static final String OPERATOR_BIT_SHL = "operator_bitwise_shl";
+    public static final String OPERATOR_BIT_NOT = "operator_bitwise_not";
+    public static final String OPERATOR_OR = "operator_bitwise_or";
+    public static final String OPERATOR_BIT_SHR = "operator_bitwise_shr";
+    public static final String OPERATOR_BIT_XOR = "operator_bitwise_xor";
+
 }
