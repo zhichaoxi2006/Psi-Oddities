@@ -1,11 +1,16 @@
 {
   "itemGroup.psi_oddities": "Psi Oddities",
+
   "psi_oddities.spellerror.stack_overflow": "ERROR: Stack Overflow",
   "psi_oddities.spellerror.cast_failed": "ERROR: Cast Failed",
+  "psi_oddities.spellerror.nan_comment": "ERROR: Comment value is not a number",
+  "psi_oddities.spellerror.null_string": "ERROR: String must not be null",
+
   "psi_oddities.not_enough_psi": "CAUSALITY ENFORCED: Insufficient Psi to satisfy the spell requirements.",
   "item.psi_oddities.cad_battery_the_dirac_sanction": "The Dirac Sanction",
   "item.psi_oddities.flux_drive": "Flux Drive",
   "item.psi_oddities.psimetal_shield": "Psimetal Shield(W.I.P)",
+
   "attributes.psi_oddities.max_psi": "Max Psi",
   "attributes.psi_oddities.regen_psi": "Psi Regen Speed",
 
@@ -13,7 +18,7 @@
   "psi_oddities.spellpiece.trick_attack.desc": "Attack target Entity",
   "psi_oddities.spellpiece.trick_nullify_defense": "Trick: Nullify Defense",
   "psi_oddities.spellpiece.trick_nullify_defense.desc" : "Nullifies the target's innate immunity after taking damage, making it vulnerable to damage again.",
-  "psi_oddities.spellpiece.operator_equal": "Operator: EQUAL",
+  "psi_oddities.spellpiece.operator_equal": "Operator: Equal",
   "psi_oddities.spellpiece.operator_equal.desc": "a == b",
   "psi_oddities.spellpiece.operator_bitwise_and": "Operator: Bitwise AND",
   "psi_oddities.spellpiece.operator_bitwise_and.desc": "a & b ( & c )",
@@ -29,6 +34,16 @@
   "psi_oddities.spellpiece.operator_bitwise_shr.desc": "a >> b",
   "psi_oddities.spellpiece.operator_bitwise_xor": "Operator: Bitwise XOR",
   "psi_oddities.spellpiece.operator_bitwise_xor.desc": "a ^ b ( ^ c )",
+  "psi_oddities.spellpiece.operator_comment_format": "Operator: Comment Format",
+  "psi_oddities.spellpiece.operator_comment_format.desc": "Formats the piece's comment replacing the \\\"%d\"",
+  "psi_oddities.spellpiece.operator_get_comment": "Operator: Get Comment",
+  "psi_oddities.spellpiece.operator_get_comment.desc": "Gets the comment for this piece",
+  "psi_oddities.spellpiece.operator_get_comment_number": "Operator: Get Comment Value",
+  "psi_oddities.spellpiece.operator_get_comment_number.desc": "Gets the numeric value of the comment for this piece",
+  "psi_oddities.spellpiece.operator_string_concatenate": "Operator: String Concatenate",
+  "psi_oddities.spellpiece.operator_string_concatenate.desc": "Joins the two strings without a space in between",
+  "psi_oddities.spellpiece.operator_string_join": "Operator: String Join",
+  "psi_oddities.spellpiece.operator_string_join.desc": "Joins the two strings with a space in between",
   "psi_oddities.spellpiece.trick_caster_blink": "Trick: Caster Blink",
   "psi_oddities.spellpiece.trick_caster_blink.desc": "Teleports the caster in the given direction",
   "psi_oddities.spellpiece.trick_dispel": "Trick: Dispel",

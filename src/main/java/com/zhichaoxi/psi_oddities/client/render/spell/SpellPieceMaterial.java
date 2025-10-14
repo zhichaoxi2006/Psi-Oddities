@@ -28,6 +28,22 @@ public class SpellPieceMaterial {
     public static final DeferredHolder<Material, Material> TRICK_NULLIFY_DEFENSE =
             registerMaterial(LibPieceNames.TRICK_NULLIFY_DEFENSE);
 
+    // ========== STRING PROCESSING ==========
+    public static final DeferredHolder<Material, Material> OPERATOR_COMMENT_FORMAT =
+            registerMaterial(LibPieceNames.OPERATOR_COMMENT_FORMAT);
+
+    public static final DeferredHolder<Material, Material> OPERATOR_GET_COMMENT =
+            registerMaterial(LibPieceNames.OPERATOR_GET_COMMENT);
+
+    public static final DeferredHolder<Material, Material> OPERATOR_GET_COMMENT_NUMBER =
+            registerMaterial(LibPieceNames.OPERATOR_GET_COMMENT_NUMBER);
+
+    public static final DeferredHolder<Material, Material> OPERATOR_STRING_CONCATENATE =
+            registerMaterial(LibPieceNames.OPERATOR_STRING_CONCATENATE);
+
+    public static final DeferredHolder<Material, Material>OPERATOR_STRING_JOIN =
+            registerMaterial(LibPieceNames.OPERATOR_STRING_JOIN);
+
     // ========== NUMBER INTRO ==========
     public static final DeferredHolder<Material, Material> PIECE_OPERATOR_EQUAL =
             registerMaterial(LibPieceNames.OPERATOR_EQUAL);

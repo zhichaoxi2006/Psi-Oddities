@@ -4,6 +4,7 @@ import com.zhichaoxi.psi_oddities.PsiOddities;
 import com.zhichaoxi.psi_oddities.lib.LibPieceNames;
 import com.zhichaoxi.psi_oddities.spell.operator.math.PieceOperatorEqual;
 import com.zhichaoxi.psi_oddities.spell.operator.math.bitwise.*;
+import com.zhichaoxi.psi_oddities.spell.operator.string.*;
 import com.zhichaoxi.psi_oddities.spell.selector.PieceSelectorRecursionDepth;
 import com.zhichaoxi.psi_oddities.spell.selector.entity.PieceSelectorSavedEntity;
 import com.zhichaoxi.psi_oddities.spell.trick.PieceTrickCast;
@@ -27,6 +28,32 @@ public final class ModSpellPieces {
             DeferredRegister.create(PsiAPI.SPELL_PIECE_REGISTRY_TYPE_KEY, PsiOddities.MODID);
     public static final DeferredRegister<Collection<Class<? extends SpellPiece>>> ADVANCEMENT_GROUPS =
             DeferredRegister.create(PsiAPI.ADVANCEMENT_GROUP_REGISTRY_KEY, PsiOddities.MODID);
+
+    // ========== STRING PROCESSING ==========
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorCommentFormat>> OPERATOR_COMMENT_FORMAT =
+            SPELL_PIECES.register(LibPieceNames.OPERATOR_COMMENT_FORMAT, () -> PieceOperatorCommentFormat.class);
+
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorGetComment>> OPERATOR_GET_COMMENT =
+            SPELL_PIECES.register(LibPieceNames.OPERATOR_GET_COMMENT, () -> PieceOperatorGetComment.class);
+
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorGetCommentNumber>> OPERATOR_GET_COMMENT_NUMBER =
+            SPELL_PIECES.register(LibPieceNames.OPERATOR_GET_COMMENT_NUMBER, () -> PieceOperatorGetCommentNumber.class);
+
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorStringConcatenate>> OPERATOR_STRING_CONCATENATE =
+            SPELL_PIECES.register(LibPieceNames.OPERATOR_STRING_CONCATENATE, () -> PieceOperatorStringConcatenate.class);
+
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorStringJoin>> OPERATOR_STRING_JOIN =
+            SPELL_PIECES.register(LibPieceNames.OPERATOR_STRING_JOIN, () -> PieceOperatorStringJoin.class);
+
+    public static final DeferredHolder<Collection<Class<? extends SpellPiece>>, Collection<Class<? extends SpellPiece>>> STRING_PROCESSING =
+            ADVANCEMENT_GROUPS.register(com.zhichaoxi.psi_oddities.lib.LibPieceGroups.STRING_PROCESSING,
+                    () -> Arrays.asList(
+                            PieceOperatorCommentFormat.class,
+                            PieceOperatorGetComment.class,
+                            PieceOperatorGetCommentNumber.class,
+                            PieceOperatorStringConcatenate.class,
+                            PieceOperatorStringJoin.class
+                    ));
 
     // ========== NUMBER INTRO ==========
     public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorEqual>> OPERATOR_EQUAL =
@@ -54,7 +81,7 @@ public final class ModSpellPieces {
             SPELL_PIECES.register(LibPieceNames.OPERATOR_BIT_XOR, () -> PieceOperatorXor.class);
 
     public static final DeferredHolder<Collection<Class<? extends SpellPiece>>, Collection<Class<? extends SpellPiece>>> OPERATORS =
-            ADVANCEMENT_GROUPS.register(LibPieceGroups.NUMBERS_INTRO,  // 需在LibPieceGroups中定义OPERATORS常量
+            ADVANCEMENT_GROUPS.register(LibPieceGroups.NUMBERS_INTRO,
                     () -> Arrays.asList(
                             PieceOperatorEqual.class,
                             PieceOperatorAnd.class,

@@ -8,9 +8,9 @@ public final class LibPieceNames {
     public static final String TRICK_SAVE_ENTITY = "trick_save_entity";
     public static final String TRICK_CAST = "trick_cast";
 
+
     public static final String SELECTOR_SAVED_ENTITY = "selector_saved_entity";
     public static final String SELECTOR_RECURSION_DEPTH = "selector_recursion_depth";
-
 
     public static final String OPERATOR_EQUAL = "operator_equal";
     public static final String OPERATOR_BIT_AND = "operator_bitwise_and";
@@ -20,5 +20,10 @@ public final class LibPieceNames {
     public static final String OPERATOR_OR = "operator_bitwise_or";
     public static final String OPERATOR_BIT_SHR = "operator_bitwise_shr";
     public static final String OPERATOR_BIT_XOR = "operator_bitwise_xor";
+    public static final String OPERATOR_COMMENT_FORMAT = "operator_comment_format";
+    public static final String OPERATOR_GET_COMMENT = "operator_get_comment";
+    public static final String OPERATOR_GET_COMMENT_NUMBER = "operator_get_comment_number";
+    public static final String OPERATOR_STRING_CONCATENATE = "operator_string_concatenate";
+    public static final String OPERATOR_STRING_JOIN = "operator_string_join";
 
 }
