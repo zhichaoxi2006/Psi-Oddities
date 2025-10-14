@@ -7,10 +7,14 @@ import com.zhichaoxi.psi_oddities.lib.LibItemNames;
 import com.zhichaoxi.psi_oddities.spell.ModSpellPieces;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.registries.RegisterEvent;
 import vazkii.psi.common.item.component.ItemCADBattery;
+
+import java.util.List;
 
 @EventBusSubscriber(modid = PsiOddities.MODID)
 public final class ModItems {
@@ -23,7 +27,11 @@ public final class ModItems {
         evt.register(Registries.ITEM, helper -> {
             cadBatteryTheDiracSanction = new ItemCADBattery(defaultBuilder());
             fluxDrive = new ItemFluxDrive(defaultBuilder());
-            psimetalShield = new ItemPsimetalShield(defaultBuilder());
+            psimetalShield = new ItemPsimetalShield(null,
+                    () -> Ingredient.of(ItemStack.EMPTY),
+                    List.of(),
+                    defaultBuilder()
+            );
 
             helper.register(PsiOddities.location(LibItemNames.CAD_BATTERY_THE_DIRAC_SANCTION), cadBatteryTheDiracSanction);
             helper.register(PsiOddities.location(LibItemNames.FLUX_DRIVE), fluxDrive);

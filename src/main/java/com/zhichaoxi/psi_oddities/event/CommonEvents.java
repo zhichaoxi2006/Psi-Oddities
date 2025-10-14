@@ -3,7 +3,6 @@ package com.zhichaoxi.psi_oddities.event;
 import com.zhichaoxi.psi_oddities.PsiOddities;
 import com.zhichaoxi.psi_oddities.attribute.base.ModAttributes;
 import com.zhichaoxi.psi_oddities.item.base.ModItems;
-import com.zhichaoxi.psi_oddities.util.FluxDriveUtil;
 import com.zhichaoxi.psi_oddities.util.PsiUtil;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -16,12 +15,11 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.ItemAttributeModifierEvent;
 import vazkii.psi.api.cad.EnumCADComponent;
 import vazkii.psi.api.cad.ICAD;
-import vazkii.psi.api.internal.IPlayerData;
 import vazkii.psi.api.spell.PreSpellCastEvent;
 import vazkii.psi.common.item.armor.*;
 
 @EventBusSubscriber(modid = PsiOddities.MODID)
-public class Handler {
+public class CommonEvents {
 
     @SubscribeEvent(priority = EventPriority.LOWEST)
     private static void onPreSpellCast(PreSpellCastEvent event) {

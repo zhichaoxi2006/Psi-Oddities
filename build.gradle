@@ -20,6 +20,13 @@ repositories {
             includeGroup "mezz.jei"
         }
     }
+    maven {
+        name = 'Modrinth'
+        url = 'https://api.modrinth.com/maven'
+        content {
+            includeGroup 'maven.modrinth'
+        }
+    }
     exclusiveContent {
         forRepository {
             maven {
@@ -122,8 +129,9 @@ dependencies {
     runtimeOnly "vazkii.patchouli:Patchouli:${patchouli_version}-NEOFORGE"
 
     implementation "vazkii.psi:psi:${psi_version}"
+    implementation "curse.maven:shield-api-1048720:7006594"
 
-    runtimeOnly("curse.maven:mekanism-268560:7017663")
+    runtimeOnly("curse.maven:mekanism-268560:7017663");
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
