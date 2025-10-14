@@ -35,6 +35,9 @@ public class PieceTrickDispel extends PieceTrick {
         Entity targetVal = this.getParamValue(context, target);
 
         context.verifyEntity(targetVal);
+        if (!context.isInRadius(targetVal)) {
+            throw new SpellRuntimeException(SpellRuntimeException.OUTSIDE_RADIUS);
+        }
         if (targetVal instanceof LivingEntity entity) {
             Collection<MobEffectInstance> effects = entity.getActiveEffects();
             MobEffectInstance[] array = effects.toArray(new MobEffectInstance[0]);

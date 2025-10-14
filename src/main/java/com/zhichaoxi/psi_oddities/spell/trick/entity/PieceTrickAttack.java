@@ -45,6 +45,9 @@ public class PieceTrickAttack extends PieceTrick {
         float damageVal = this.getParamValue(context, number).floatValue();
 
         context.verifyEntity(targetVal);
+        if (!context.isInRadius(targetVal)) {
+            throw new SpellRuntimeException(SpellRuntimeException.OUTSIDE_RADIUS);
+        }
         targetVal.hurt(targetVal.damageSources().source(LibResources.PSI_OVERLOAD, caster), damageVal);
 
         return null;

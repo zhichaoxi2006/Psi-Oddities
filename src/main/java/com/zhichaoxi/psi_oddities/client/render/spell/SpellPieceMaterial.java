@@ -41,8 +41,11 @@ public class SpellPieceMaterial {
     public static final DeferredHolder<Material, Material> OPERATOR_STRING_CONCATENATE =
             registerMaterial(LibPieceNames.OPERATOR_STRING_CONCATENATE);
 
-    public static final DeferredHolder<Material, Material>OPERATOR_STRING_JOIN =
+    public static final DeferredHolder<Material, Material> OPERATOR_STRING_JOIN =
             registerMaterial(LibPieceNames.OPERATOR_STRING_JOIN);
+
+    public static final DeferredHolder<Material, Material> OPERATOR_GET_COMMENT_VECTOR =
+            registerMaterial(LibPieceNames.OPERATOR_GET_COMMENT_VECTOR);
 
     // ========== NUMBER INTRO ==========
     public static final DeferredHolder<Material, Material> PIECE_OPERATOR_EQUAL =

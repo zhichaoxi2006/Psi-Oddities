@@ -1,5 +1,6 @@
 package com.zhichaoxi.psi_oddities.mixin;
 
+import com.zhichaoxi.psi_oddities.core.handler.ConfigHandler;
 import net.minecraft.world.entity.Entity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -11,6 +12,8 @@ import vazkii.psi.api.spell.ISpellImmune;
 public interface ISpellImmuneMixin {
     @Inject(method = "isImmune(Lnet/minecraft/world/entity/Entity;)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;canUsePortal(Z)Z"), cancellable = true)
     private static void isImmune$canUsePortal(Entity e, CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(false);
+        if (!ConfigHandler.COMMON.bossImmuneSpell.getAsBoolean()) {
+            cir.setReturnValue(false);
+        }
     }
 }

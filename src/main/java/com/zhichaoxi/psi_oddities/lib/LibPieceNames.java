@@ -25,5 +25,6 @@ public final class LibPieceNames {
     public static final String OPERATOR_GET_COMMENT_NUMBER = "operator_get_comment_number";
     public static final String OPERATOR_STRING_CONCATENATE = "operator_string_concatenate";
     public static final String OPERATOR_STRING_JOIN = "operator_string_join";
+    public static final String OPERATOR_GET_COMMENT_VECTOR = "operator_get_comment_vector";
 
 }

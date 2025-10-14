@@ -32,6 +32,9 @@ public class PieceTrickNullifyDefense extends PieceTrick {
         Entity targetVal = this.getParamValue(context, target);
 
         context.verifyEntity(targetVal);
+        if (!context.isInRadius(targetVal)) {
+            throw new SpellRuntimeException(SpellRuntimeException.OUTSIDE_RADIUS);
+        }
         if (targetVal instanceof LivingEntity) {
             targetVal.invulnerableTime = 0;
         }

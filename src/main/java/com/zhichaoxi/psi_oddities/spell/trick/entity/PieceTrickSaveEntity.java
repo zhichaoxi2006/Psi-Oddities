@@ -74,6 +74,10 @@ public class PieceTrickSaveEntity extends PieceTrick {
         }
 
         context.verifyEntity(targetVal);
+        if (!context.isInRadius(targetVal)) {
+            throw new SpellRuntimeException(SpellRuntimeException.OUTSIDE_RADIUS);
+        }
+
         List<UUID> list = new ArrayList<>(getUUIDList(cadStack));
         if (targetVal instanceof PartEntity<?> partEntity) {
             Entity parent = partEntity.getParent();

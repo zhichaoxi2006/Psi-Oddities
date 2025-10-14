@@ -40,6 +40,8 @@
   "psi_oddities.spellpiece.operator_get_comment.desc": "Gets the comment for this piece",
   "psi_oddities.spellpiece.operator_get_comment_number": "Operator: Get Comment Value",
   "psi_oddities.spellpiece.operator_get_comment_number.desc": "Gets the numeric value of the comment for this piece",
+  "psi_oddities.spellpiece.operator_get_comment_vector": "Operator: Get Comment Vector",
+  "psi_oddities.spellpiece.operator_get_comment_vector.desc": "Gets the Vector(Form like \"[x, y, z]\") of the comment for this piece",
   "psi_oddities.spellpiece.operator_string_concatenate": "Operator: String Concatenate",
   "psi_oddities.spellpiece.operator_string_concatenate.desc": "Joins the two strings without a space in between",
   "psi_oddities.spellpiece.operator_string_join": "Operator: String Join",

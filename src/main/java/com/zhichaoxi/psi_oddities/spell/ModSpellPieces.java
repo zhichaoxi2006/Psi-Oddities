@@ -45,6 +45,9 @@ public final class ModSpellPieces {
     public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorStringJoin>> OPERATOR_STRING_JOIN =
             SPELL_PIECES.register(LibPieceNames.OPERATOR_STRING_JOIN, () -> PieceOperatorStringJoin.class);
 
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorGetCommentVector>> OPERATOR_GET_COMMENT_VECTOR =
+            SPELL_PIECES.register(LibPieceNames.OPERATOR_GET_COMMENT_VECTOR, () -> PieceOperatorGetCommentVector.class);
+
     public static final DeferredHolder<Collection<Class<? extends SpellPiece>>, Collection<Class<? extends SpellPiece>>> STRING_PROCESSING =
             ADVANCEMENT_GROUPS.register(com.zhichaoxi.psi_oddities.lib.LibPieceGroups.STRING_PROCESSING,
                     () -> Arrays.asList(
@@ -52,7 +55,8 @@ public final class ModSpellPieces {
                             PieceOperatorGetComment.class,
                             PieceOperatorGetCommentNumber.class,
                             PieceOperatorStringConcatenate.class,
-                            PieceOperatorStringJoin.class
+                            PieceOperatorStringJoin.class,
+                            PieceOperatorGetCommentVector.class
                     ));
 
     // ========== NUMBER INTRO ==========
