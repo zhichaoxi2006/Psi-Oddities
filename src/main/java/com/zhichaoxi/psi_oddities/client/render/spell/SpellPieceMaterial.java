@@ -82,6 +82,9 @@ public class SpellPieceMaterial {
     public static final DeferredHolder<Material, Material> TRICK_CAST =
             registerMaterial(LibPieceNames.TRICK_CAST);
 
+    public static final DeferredHolder<Material, Material> SELECTOR_BULLET_IN_CAD =
+            registerMaterial(LibPieceNames.SELECTOR_BULLET_IN_CAD);
+
     public static final DeferredHolder<Material, Material> SELECTOR_RECURSION_DEPTH =
             registerMaterial(LibPieceNames.SELECTOR_RECURSION_DEPTH);
 

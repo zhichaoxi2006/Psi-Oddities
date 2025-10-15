@@ -7,6 +7,7 @@ import com.zhichaoxi.psi_oddities.spell.operator.math.bitwise.*;
 import com.zhichaoxi.psi_oddities.spell.operator.string.*;
 import com.zhichaoxi.psi_oddities.spell.selector.PieceSelectorRecursionDepth;
 import com.zhichaoxi.psi_oddities.spell.selector.entity.PieceSelectorSavedEntity;
+import com.zhichaoxi.psi_oddities.spell.selector.itemstack.PieceSelectorBulletInCAD;
 import com.zhichaoxi.psi_oddities.spell.trick.PieceTrickCast;
 import com.zhichaoxi.psi_oddities.spell.trick.blink.PieceTrickCasterBlink;
 import com.zhichaoxi.psi_oddities.spell.trick.entity.PieceTrickAttack;
@@ -140,12 +141,16 @@ public final class ModSpellPieces {
     public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceSelectorRecursionDepth>> SELECTOR_RECURSION_DEPTH =
             SPELL_PIECES.register(LibPieceNames.SELECTOR_RECURSION_DEPTH, () -> PieceSelectorRecursionDepth.class);
 
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceSelectorBulletInCAD>> SELECTOR_BULLET_IN_CAD =
+            SPELL_PIECES.register(LibPieceNames.SELECTOR_BULLET_IN_CAD, () -> PieceSelectorBulletInCAD.class);
+
     public static final DeferredHolder<Collection<Class<? extends SpellPiece>>, Collection<Class<? extends SpellPiece>>> MISC =
             ADVANCEMENT_GROUPS.register(LibPieceGroups.MISC_TRICKS,
                     () -> Arrays.asList(
                             PieceTrickCasterBlink.class,
                             PieceTrickDispel.class,
                             PieceTrickCast.class,
-                            PieceSelectorRecursionDepth.class
+                            PieceSelectorRecursionDepth.class,
+                            PieceSelectorBulletInCAD.class
                     ));
 }

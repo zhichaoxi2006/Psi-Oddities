@@ -32,7 +32,7 @@ public class PieceOperatorStringJoin extends PieceOperator {
 
         String s = "null";
         if (p1 != null && p2 != null)
-            s = p1 + " " + p2;
+            s = p1 + "" + p2;
 
         return s;
     }

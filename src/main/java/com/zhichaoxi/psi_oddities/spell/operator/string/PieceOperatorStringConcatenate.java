@@ -29,7 +29,7 @@ public class PieceOperatorStringConcatenate extends PieceOperator {
 
         String s = "null";
         if (p1 != null && p2 != null)
-            s = p1 + p2.toString();
+            s = p1 + " " + p2;
 
         return s;
     }
