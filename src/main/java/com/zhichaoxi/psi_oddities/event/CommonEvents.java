@@ -2,10 +2,12 @@ package com.zhichaoxi.psi_oddities.event;
 
 import com.zhichaoxi.psi_oddities.PsiOddities;
 import com.zhichaoxi.psi_oddities.attribute.base.ModAttributes;
+import com.zhichaoxi.psi_oddities.item.ItemPsimetalShield;
 import com.zhichaoxi.psi_oddities.item.base.ModItems;
 import com.zhichaoxi.psi_oddities.util.PsiUtil;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -13,10 +15,17 @@ import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.ItemAttributeModifierEvent;
+import net.neoforged.neoforge.event.entity.living.LivingShieldBlockEvent;
+import vazkii.psi.api.PsiAPI;
 import vazkii.psi.api.cad.EnumCADComponent;
 import vazkii.psi.api.cad.ICAD;
+import vazkii.psi.api.cad.ISocketable;
 import vazkii.psi.api.spell.PreSpellCastEvent;
+import vazkii.psi.api.spell.SpellContext;
+import vazkii.psi.common.core.handler.PlayerDataHandler;
+import vazkii.psi.common.item.ItemCAD;
 import vazkii.psi.common.item.armor.*;
+import vazkii.psi.common.item.tool.IPsimetalTool;
 
 @EventBusSubscriber(modid = PsiOddities.MODID)
 public class CommonEvents {
@@ -41,6 +50,35 @@ public class CommonEvents {
                 event.setCancellationMessage("");
             }
             event.setCanceled(true);
+        }
+    }
+
+    @SubscribeEvent
+    private static void onShieldBlock(LivingShieldBlockEvent event) {
+        LivingEntity entity = event.getEntity();
+        if (entity instanceof Player player) {
+            ItemStack stack = player.getUseItem();
+            if (stack.getItem() instanceof ItemPsimetalShield) {
+                PlayerDataHandler.PlayerData data = PlayerDataHandler.get(player);
+                ItemStack playerCad = PsiAPI.getPlayerCAD(player);
+                if(IPsimetalTool.isEnabled(stack) && !playerCad.isEmpty()) {
+
+                    ItemStack bullet = ISocketable.socketable(stack).getSelectedBullet();
+
+                    LivingEntity attacker;
+                    if (event.getDamageSource().getEntity() instanceof LivingEntity) {
+                        attacker = (LivingEntity) event.getDamageSource().getEntity();
+                    } else {
+                        attacker = null;
+                    }
+                    ItemCAD.cast(player.getCommandSenderWorld(), player, data, bullet, playerCad, 5, 0, 0.025f, (SpellContext context) -> {
+                        context.tool = stack;
+                        context.attackingEntity = attacker;
+                        context.damageTaken = event.getBlockedDamage();
+                    }, 0);
+
+                }
+            }
         }
     }
 

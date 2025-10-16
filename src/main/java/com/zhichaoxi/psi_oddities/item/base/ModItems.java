@@ -30,7 +30,7 @@ public final class ModItems {
             psimetalShield = new ItemPsimetalShield(null,
                     () -> Ingredient.of(ItemStack.EMPTY),
                     List.of(),
-                    defaultBuilder()
+                    defaultBuilder().durability(972)
             );
 
             helper.register(PsiOddities.location(LibItemNames.CAD_BATTERY_THE_DIRAC_SANCTION), cadBatteryTheDiracSanction);
