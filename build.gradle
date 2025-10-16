@@ -129,7 +129,8 @@ dependencies {
     runtimeOnly "vazkii.patchouli:Patchouli:${patchouli_version}-NEOFORGE"
 
     implementation "vazkii.psi:psi:${psi_version}"
-    implementation "curse.maven:shield-api-1048720:7006594"
+    implementation "curse.maven:shield-api-1048720:7006594";
+    jarJar("curse.maven:shield-api-1048720:7006594");
 
     runtimeOnly("curse.maven:mekanism-268560:7017663");
 }
