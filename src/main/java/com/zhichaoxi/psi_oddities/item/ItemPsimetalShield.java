@@ -50,7 +50,10 @@ public class ItemPsimetalShield extends CustomShieldItem implements IPsimetalToo
         IPsimetalTool.regen(stack, entityIn);
     }
 
-    public void cast(ItemStack stack, LivingShieldBlockEvent event) {}
+    @Override
+    public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged) {
+        return slotChanged;
+    }
 
     @Nullable
     @Override
