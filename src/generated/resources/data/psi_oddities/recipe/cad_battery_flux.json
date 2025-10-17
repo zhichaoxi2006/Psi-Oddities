@@ -6,7 +6,7 @@
       "item": "psi:ivory_psimetal"
     },
     "I": {
-      "item": "psi:cad_assembly_psimetal"
+      "item": "psi:psimetal"
     },
     "N": {
       "item": "minecraft:nether_star"
@@ -22,6 +22,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "psi_oddities:cad_battery_flux"
+    "id": "psi_oddities:cad_battery_the_dirac_sanction"
   }
 }
