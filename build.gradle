@@ -9,7 +9,9 @@ version = mod_version
 group = mod_group_id
 
 repositories {
-    mavenLocal()
+    mavenLocal {
+        name "local"
+    }
     maven {
         // for Patchouli and JEI
         name "blamejared"
@@ -130,6 +132,7 @@ dependencies {
 
     implementation "vazkii.psi:psi:${psi_version}"
     implementation "curse.maven:shield-api-1048720:7006594";
+    implementation("com.zhichaoxi:Psi-Tweaks:1.0.0")
     jarJar("curse.maven:shield-api-1048720:7006594");
 
     runtimeOnly("curse.maven:mekanism-268560:7017663");

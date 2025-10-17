@@ -4,11 +4,6 @@
   "package": "com.zhichaoxi.psi_oddities.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "HUDHandlerMixin",
-    "ISpellImmuneMixin",
-    "PlayerDataMixin",
-    "SpellContextMixin",
-    "ToolSocketableMixin"
   ],
   "client": [
   ],

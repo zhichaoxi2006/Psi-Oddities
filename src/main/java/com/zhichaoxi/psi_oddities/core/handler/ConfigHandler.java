@@ -14,17 +14,7 @@ public class ConfigHandler {
     }
 
     public static class Common {
-        public final ModConfigSpec.BooleanValue bossImmuneSpell;
-            public final ModConfigSpec.DoubleValue maxCastRadius;
 
-        public Common(ModConfigSpec.Builder builder) {
-            bossImmuneSpell = builder
-                    .comment(" Do Boss immune Psi Spell.")
-                    .define("common.bossImmuneSpell", false);
-
-            maxCastRadius = builder
-                    .comment(" Set max cast radius of spell.")
-                    .defineInRange("common.maxCastRadius", -1, -1, Double.MAX_VALUE);
-        }
+        public Common(ModConfigSpec.Builder builder) {}
     }
 }

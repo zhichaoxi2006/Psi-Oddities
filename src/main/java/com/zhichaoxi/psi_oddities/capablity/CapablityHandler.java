@@ -2,6 +2,7 @@ package com.zhichaoxi.psi_oddities.capablity;
 
 import com.zhichaoxi.psi_oddities.PsiOddities;
 import com.zhichaoxi.psi_oddities.item.base.ModItems;
+import com.zhichaoxi.psi_tweaks.core.ModCapabilities;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.capabilities.Capabilities;
@@ -17,6 +18,9 @@ public class CapablityHandler {
     public static void registerCapabilities(RegisterCapabilitiesEvent event) {
         event.registerItem(Capabilities.EnergyStorage.ITEM,
                 (stack, ctx) -> new EnergyStorageItemstack(1000000, stack),
+                ModItems.fluxDrive);
+        event.registerItem(ModCapabilities.ADDITIONAL_PSI_HANDLER_ITEM,
+                (stack, ctx) -> new EnergyAdditionalPsiHander(stack),
                 ModItems.fluxDrive);
 
         event.registerItem(

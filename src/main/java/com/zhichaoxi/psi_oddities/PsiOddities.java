@@ -1,6 +1,5 @@
 package com.zhichaoxi.psi_oddities;
 
-import com.zhichaoxi.psi_oddities.attribute.base.ModAttributes;
 import com.zhichaoxi.psi_oddities.client.render.spell.SpellPieceMaterial;
 import com.zhichaoxi.psi_oddities.component.ModComponents;
 import com.zhichaoxi.psi_oddities.core.handler.ConfigHandler;
@@ -20,7 +19,6 @@ public class PsiOddities {
 
     public PsiOddities(IEventBus modEventBus, Dist dist, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
-        ModAttributes.DR.register(modEventBus);
         ModComponents.DR.register(modEventBus);
         ModSpellPieces.SPELL_PIECES.register(modEventBus);
         ModSpellPieces.ADVANCEMENT_GROUPS.register(modEventBus);

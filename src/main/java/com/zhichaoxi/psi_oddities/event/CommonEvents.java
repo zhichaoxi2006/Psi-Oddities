@@ -1,10 +1,10 @@
 package com.zhichaoxi.psi_oddities.event;
 
 import com.zhichaoxi.psi_oddities.PsiOddities;
-import com.zhichaoxi.psi_oddities.attribute.base.ModAttributes;
+import com.zhichaoxi.psi_tweaks.core.ModAttributes;
 import com.zhichaoxi.psi_oddities.item.ItemPsimetalShield;
 import com.zhichaoxi.psi_oddities.item.base.ModItems;
-import com.zhichaoxi.psi_oddities.util.PsiUtil;
+import com.zhichaoxi.psi_tweaks.util.PsiUtil;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.LivingEntity;
