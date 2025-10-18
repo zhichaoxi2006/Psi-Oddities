@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "psi:psigem"
+    },
+    "M": {
+      "item": "psi:psimetal"
+    }
+  },
+  "pattern": [
+    "MMM",
+    "GMG",
+    " M "
+  ],
+  "result": {
+    "count": 1,
+    "id": "psi_oddities:psimetal_shield"
+  }
+}

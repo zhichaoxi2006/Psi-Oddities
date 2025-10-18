@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "psi:ivory_psimetal"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "W": {
+      "item": "psi:ebony_psimetal"
+    }
+  },
+  "pattern": [
+    "W ",
+    "R ",
+    "B "
+  ],
+  "result": {
+    "count": 1,
+    "id": "psi_oddities:flux_drive"
+  }
+}
