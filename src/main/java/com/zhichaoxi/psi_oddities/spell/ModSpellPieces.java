@@ -10,10 +10,7 @@ import com.zhichaoxi.psi_oddities.spell.selector.entity.PieceSelectorSavedEntity
 import com.zhichaoxi.psi_oddities.spell.selector.itemstack.PieceSelectorBulletInCAD;
 import com.zhichaoxi.psi_oddities.spell.trick.PieceTrickCast;
 import com.zhichaoxi.psi_oddities.spell.trick.blink.PieceTrickCasterBlink;
-import com.zhichaoxi.psi_oddities.spell.trick.entity.PieceTrickAttack;
-import com.zhichaoxi.psi_oddities.spell.trick.entity.PieceTrickDispel;
-import com.zhichaoxi.psi_oddities.spell.trick.entity.PieceTrickNullifyDefense;
-import com.zhichaoxi.psi_oddities.spell.trick.entity.PieceTrickSaveEntity;
+import com.zhichaoxi.psi_oddities.spell.trick.entity.*;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import vazkii.psi.api.PsiAPI;
@@ -117,6 +114,9 @@ public final class ModSpellPieces {
     public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickAttack>> TRICK_ATTACK =
             SPELL_PIECES.register(LibPieceNames.TRICK_ATTACK, () -> PieceTrickAttack.class);
 
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickMassAttack>> TRICK_MASS_ATTACK =
+            SPELL_PIECES.register(LibPieceNames.TRICK_MASS_ATTACK, () -> PieceTrickMassAttack.class);
+
     public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickNullifyDefense>> TRICK_NULLIFY_DEFENSE =
             SPELL_PIECES.register(LibPieceNames.TRICK_NULLIFY_DEFENSE, () -> PieceTrickNullifyDefense.class);
 
@@ -124,6 +124,7 @@ public final class ModSpellPieces {
             ADVANCEMENT_GROUPS.register(com.zhichaoxi.psi_oddities.lib.LibPieceGroups.COMBAT_MAGIC,
                     () -> Arrays.asList(
                             PieceTrickAttack.class,
+                            PieceTrickMassAttack.class,
                             PieceTrickNullifyDefense.class
                     ));
 

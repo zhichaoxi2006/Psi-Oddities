@@ -15,8 +15,8 @@ public class PieceTrickAttack extends PieceTrick {
 
     public PieceTrickAttack(Spell spell) {
         super(spell);
-        setStatLabel(EnumSpellStat.POTENCY, new StatLabel(SpellParam.GENERIC_NAME_NUMBER, true).abs().mul(40));
-        setStatLabel(EnumSpellStat.COST, new StatLabel(SpellParam.GENERIC_NAME_NUMBER, true).abs().mul(65));
+        setStatLabel(EnumSpellStat.POTENCY, new StatLabel(SpellParam.GENERIC_NAME_NUMBER, true).abs().mul(15));
+        setStatLabel(EnumSpellStat.COST, new StatLabel(SpellParam.GENERIC_NAME_NUMBER, true).abs().mul(20));
     }
 
     @Override
@@ -34,21 +34,25 @@ public class PieceTrickAttack extends PieceTrick {
             throw new SpellCompilationException(SpellCompilationException.NON_POSITIVE_VALUE, x, y);
         }
 
-        meta.addStat(EnumSpellStat.POTENCY, (int) (damageVal * 40));
-        meta.addStat(EnumSpellStat.COST, (int) (damageVal * 65));
+        meta.addStat(EnumSpellStat.POTENCY, (int) (damageVal * 15));
+        meta.addStat(EnumSpellStat.COST, (int) (damageVal * 20));
     }
 
-    @Override
-    public Object execute(SpellContext context) throws SpellRuntimeException {
+    public static void attack(SpellContext context, Entity targetVal, float damageVal) throws SpellRuntimeException {
         Player caster = context.caster;
-        Entity targetVal = this.getParamValue(context, target);
-        float damageVal = this.getParamValue(context, number).floatValue();
-
         context.verifyEntity(targetVal);
         if (!context.isInRadius(targetVal)) {
             throw new SpellRuntimeException(SpellRuntimeException.OUTSIDE_RADIUS);
         }
         targetVal.hurt(targetVal.damageSources().source(LibResources.PSI_OVERLOAD, caster), damageVal);
+    }
+
+    @Override
+    public Object execute(SpellContext context) throws SpellRuntimeException {
+        Entity targetVal = this.getParamValue(context, target);
+        float damageVal = this.getParamValue(context, number).floatValue();
+
+        attack(context, targetVal, damageVal);
 
         return null;
     }

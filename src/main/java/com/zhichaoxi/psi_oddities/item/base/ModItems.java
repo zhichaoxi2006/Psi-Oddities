@@ -4,10 +4,8 @@ import com.zhichaoxi.psi_oddities.PsiOddities;
 import com.zhichaoxi.psi_oddities.item.ItemFluxDrive;
 import com.zhichaoxi.psi_oddities.item.ItemPsimetalShield;
 import com.zhichaoxi.psi_oddities.lib.LibItemNames;
-import com.zhichaoxi.psi_oddities.spell.ModSpellPieces;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -28,7 +26,9 @@ public final class ModItems {
             cadBatteryTheDiracSanction = new ItemCADBattery(defaultBuilder());
             fluxDrive = new ItemFluxDrive(defaultBuilder());
             psimetalShield = new ItemPsimetalShield(null,
-                    () -> Ingredient.of(ItemStack.EMPTY),
+                    () -> Ingredient.of(
+                            vazkii.psi.common.item.base.ModItems.psigem.get(),
+                            vazkii.psi.common.item.base.ModItems.psimetal.get()),
                     List.of(),
                     defaultBuilder().durability(972)
             );

@@ -25,6 +25,9 @@ public class SpellPieceMaterial {
     public static final DeferredHolder<Material, Material> TRICK_ATTACK =
             registerMaterial(LibPieceNames.TRICK_ATTACK);
 
+    public static final DeferredHolder<Material, Material> TRICK_MASS_ATTACK =
+            registerMaterial(LibPieceNames.TRICK_MASS_ATTACK);
+
     public static final DeferredHolder<Material, Material> TRICK_NULLIFY_DEFENSE =
             registerMaterial(LibPieceNames.TRICK_NULLIFY_DEFENSE);
 

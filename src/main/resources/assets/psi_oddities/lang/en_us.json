@@ -15,13 +15,12 @@
   "item.psi_oddities.flux_drive": "Flux Drive",
   "item.psi_oddities.psimetal_shield": "Psimetal Shield",
 
-  "attributes.psi_oddities.max_psi": "Max Psi",
-  "attributes.psi_oddities.regen_psi": "Psi Regen Speed",
-
+  "psi_oddities.spellpiece.trick_mass_attack": "Trick: Mass Attack",
+  "psi_oddities.spellpiece.trick_mass_attack.desc": "deal damage everybody",
   "psi_oddities.spellpiece.selector_bullet_in_cad": "Selector: Bullet In CAD",
   "psi_oddities.spellpiece.selector_bullet_in_cad.desc": "Select bullet in CAD",
   "psi_oddities.spellpiece.trick_attack": "Trick: Attack",
-  "psi_oddities.spellpiece.trick_attack.desc": "Attack target Entity",
+  "psi_oddities.spellpiece.trick_attack.desc": "deal damage to target",
   "psi_oddities.spellpiece.trick_nullify_defense": "Trick: Nullify Defense",
   "psi_oddities.spellpiece.trick_nullify_defense.desc" : "Nullifies the target's innate immunity after taking damage, making it vulnerable to damage again.",
   "psi_oddities.spellpiece.operator_equal": "Operator: Equal",
