@@ -1,7 +1,7 @@
 package com.zhichaoxi.psi_oddities.spell.trick;
 
+import com.zhichaoxi.psi_oddities.spell.base.SpellParams;
 import com.zhichaoxi.psi_oddities.spell.param.ParamItemStack;
-import com.zhichaoxi.psi_oddities.spell.param.SpellParams;
 import com.zhichaoxi.psi_oddities.util.ErrorUtil;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;

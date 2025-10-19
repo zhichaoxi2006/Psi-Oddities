@@ -2,6 +2,10 @@
   "itemGroup.psi_oddities": "Psi Oddities",
 
   "psi_oddities.spellparam.item_stack": "ItemStack",
+  "psi_oddities.spellparam.param1": "Param A",
+  "psi_oddities.spellparam.param2": "Param B",
+  "psi_oddities.spellparam.param3": "Param C",
+
 
   "psi.data_type.item_stack": "ItemStack",
 

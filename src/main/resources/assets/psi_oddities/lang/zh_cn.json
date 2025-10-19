@@ -1,6 +1,9 @@
 {
   "itemGroup.psi_oddities": "Psi Oddities",
   "psi_oddities.spellparam.item_stack": "ItemStack",
+  "psi_oddities.spellparam.param1": "参数A",
+  "psi_oddities.spellparam.param2": "参数B",
+  "psi_oddities.spellparam.param3": "参数C",
   "psi.data_type.item_stack": "ItemStack",
   "psi_oddities.spellerror.stack_overflow": "错误：栈溢出",
   "psi_oddities.spellerror.cast_failed": "错误：施法失败",
