@@ -9,6 +9,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import vazkii.psi.api.ClientPsiAPI;
 
+@SuppressWarnings("unused")
 public class SpellPieceMaterial {
     // ========== REGISTRIES ==========
     public static final DeferredRegister<Material> SPELL_PIECE_MATERIAL =

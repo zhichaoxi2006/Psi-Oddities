@@ -20,6 +20,7 @@ import vazkii.psi.common.lib.LibPieceGroups;
 import java.util.Arrays;
 import java.util.Collection;
 
+@SuppressWarnings("unused")
 public final class ModSpellPieces {
 
     public static final DeferredRegister<Class<? extends SpellPiece>> SPELL_PIECES =
