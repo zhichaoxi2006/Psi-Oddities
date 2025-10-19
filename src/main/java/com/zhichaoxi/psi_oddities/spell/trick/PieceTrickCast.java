@@ -12,7 +12,6 @@ import vazkii.psi.common.core.handler.PlayerDataHandler;
 import vazkii.psi.common.item.ItemCAD;
 
 public class PieceTrickCast extends PieceTrick {
-    private static final int STACK_SIZE = 512;
 
     SpellParam<ItemStack> stack;
 
@@ -43,9 +42,6 @@ public class PieceTrickCast extends PieceTrick {
         } else {
             cast_depth = 0;
         }
-        if (cast_depth > STACK_SIZE) {
-            throw new SpellRuntimeException(ErrorUtil.STACK_OVERFLOW);
-        }
 
         Player caster = context.caster;
         PlayerDataHandler.PlayerData data = PlayerDataHandler.get(caster);
@@ -58,8 +54,14 @@ public class PieceTrickCast extends PieceTrick {
             throw new SpellRuntimeException(ErrorUtil.INVAILD_SPELL_ACCEPTOR);
         }
 
-        boolean did = ItemCAD.cast(caster.level(), caster, data, bullet, cadStack, 0, 25, 0.0F,
-                ctx -> ctx.customData.put("cast_depth", cast_depth + 1) ).isPresent();
+        boolean did;
+        try {
+            did = ItemCAD.cast(caster.level(), caster, data, bullet, cadStack, 0, 0, 0.0F,
+                    ctx -> ctx.customData.put("cast_depth", cast_depth + 1) ).isPresent();
+        } catch (StackOverflowError error) {
+            throw new SpellRuntimeException(ErrorUtil.STACK_OVERFLOW);
+        }
+
         if (!did) {
             throw new SpellRuntimeException(ErrorUtil.CAST_FAILED);
         }
