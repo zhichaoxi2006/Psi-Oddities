@@ -14,6 +14,11 @@ public final class LibPieceNames {
     public static final String SELECTOR_RECURSION_DEPTH = "selector_recursion_depth";
 
     public static final String OPERATOR_EQUAL = "operator_equal";
+    public static final String OPERATOR_UNEQUAL = "operator_unequal";
+    public static final String OPERATOR_GT = "operator_gt";
+    public static final String OPERATOR_GE = "operator_ge";
+    public static final String OPERATOR_LT = "operator_lt";
+    public static final String OPERATOR_LE = "operator_le";
     public static final String OPERATOR_BIT_AND = "operator_bitwise_and";
     public static final String OPERATOR_BIT_LOGIC_SHR = "operator_bitwise_logic_shr";
     public static final String OPERATOR_BIT_SHL = "operator_bitwise_shl";

@@ -4,7 +4,7 @@ import com.zhichaoxi.psi_oddities.client.render.spell.SpellPieceMaterial;
 import com.zhichaoxi.psi_oddities.component.ModComponents;
 import com.zhichaoxi.psi_oddities.core.handler.ConfigHandler;
 import com.zhichaoxi.psi_oddities.item.component.DefaultStats;
-import com.zhichaoxi.psi_oddities.spell.ModSpellPieces;
+import com.zhichaoxi.psi_oddities.spell.base.ModSpellPieces;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;

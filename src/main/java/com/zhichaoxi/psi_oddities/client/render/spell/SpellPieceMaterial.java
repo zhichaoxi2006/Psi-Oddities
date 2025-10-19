@@ -51,28 +51,43 @@ public class SpellPieceMaterial {
             registerMaterial(LibPieceNames.OPERATOR_GET_COMMENT_VECTOR);
 
     // ========== NUMBER INTRO ==========
-    public static final DeferredHolder<Material, Material> PIECE_OPERATOR_EQUAL =
+    public static final DeferredHolder<Material, Material> OPERATOR_EQUAL =
             registerMaterial(LibPieceNames.OPERATOR_EQUAL);
 
-    public static final DeferredHolder<Material, Material> PIECE_OPERATOR_BIT_AND =
+    public static final DeferredHolder<Material, Material> OPERATOR_UNEQUAL =
+            registerMaterial(LibPieceNames.OPERATOR_UNEQUAL);
+
+    public static final DeferredHolder<Material, Material> OPERATOR_GT =
+            registerMaterial(LibPieceNames.OPERATOR_GT);
+
+    public static final DeferredHolder<Material, Material> OPERATOR_GE =
+            registerMaterial(LibPieceNames.OPERATOR_GE);
+
+    public static final DeferredHolder<Material, Material> OPERATOR_LT =
+            registerMaterial(LibPieceNames.OPERATOR_LT);
+
+    public static final DeferredHolder<Material, Material> OPERATOR_LE =
+            registerMaterial(LibPieceNames.OPERATOR_LE);
+
+    public static final DeferredHolder<Material, Material> OPERATOR_BIT_AND =
             registerMaterial(LibPieceNames.OPERATOR_BIT_AND);
 
-    public static final DeferredHolder<Material, Material> PIECE_OPERATOR_BIT_LOGIC_SHR =
+    public static final DeferredHolder<Material, Material> OPERATOR_BIT_LOGIC_SHR =
             registerMaterial(LibPieceNames.OPERATOR_BIT_LOGIC_SHR);
 
-    public static final DeferredHolder<Material, Material> PIECE_OPERATOR_BIT_SHL =
+    public static final DeferredHolder<Material, Material> OPERATOR_BIT_SHL =
             registerMaterial(LibPieceNames.OPERATOR_BIT_SHL);
 
-    public static final DeferredHolder<Material, Material> PIECE_OPERATOR_BIT_NOT =
+    public static final DeferredHolder<Material, Material> OPERATOR_BIT_NOT =
             registerMaterial(LibPieceNames.OPERATOR_BIT_NOT);
 
-    public static final DeferredHolder<Material, Material> PIECE_OPERATOR_OR =
+    public static final DeferredHolder<Material, Material> OPERATOR_OR =
             registerMaterial(LibPieceNames.OPERATOR_OR);
 
-    public static final DeferredHolder<Material, Material> PIECE_OPERATOR_BIT_SHR =
+    public static final DeferredHolder<Material, Material> OPERATOR_BIT_SHR =
             registerMaterial(LibPieceNames.OPERATOR_BIT_SHR);
 
-    public static final DeferredHolder<Material, Material> PIECE_OPERATOR_BIT_XOR =
+    public static final DeferredHolder<Material, Material> OPERATOR_BIT_XOR =
             registerMaterial(LibPieceNames.OPERATOR_BIT_XOR);
 
     // ========= MISC ==========

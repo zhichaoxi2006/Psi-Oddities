@@ -1,8 +1,8 @@
-package com.zhichaoxi.psi_oddities.spell;
+package com.zhichaoxi.psi_oddities.spell.base;
 
 import com.zhichaoxi.psi_oddities.PsiOddities;
 import com.zhichaoxi.psi_oddities.lib.LibPieceNames;
-import com.zhichaoxi.psi_oddities.spell.operator.math.PieceOperatorEqual;
+import com.zhichaoxi.psi_oddities.spell.operator.math.*;
 import com.zhichaoxi.psi_oddities.spell.operator.math.bitwise.*;
 import com.zhichaoxi.psi_oddities.spell.operator.string.*;
 import com.zhichaoxi.psi_oddities.spell.selector.PieceSelectorRecursionDepth;
@@ -61,6 +61,21 @@ public final class ModSpellPieces {
     public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorEqual>> OPERATOR_EQUAL =
             SPELL_PIECES.register(LibPieceNames.OPERATOR_EQUAL, () -> PieceOperatorEqual.class);
 
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorUnEqual>> OPERATOR_UNEQUAL =
+            SPELL_PIECES.register(LibPieceNames.OPERATOR_UNEQUAL, () -> PieceOperatorUnEqual.class);
+
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorGreaterThan>> OPERATOR_GT =
+            SPELL_PIECES.register(LibPieceNames.OPERATOR_GT, () -> PieceOperatorGreaterThan.class);
+
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorGreaterThanOrEqual>> OPERATOR_GE =
+            SPELL_PIECES.register(LibPieceNames.OPERATOR_GE, () -> PieceOperatorGreaterThanOrEqual.class);
+
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorLessThan>> OPERATOR_LT =
+            SPELL_PIECES.register(LibPieceNames.OPERATOR_LT, () -> PieceOperatorLessThan.class);
+
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorLessThanOrEqual>> OPERATOR_LE =
+            SPELL_PIECES.register(LibPieceNames.OPERATOR_LE, () -> PieceOperatorLessThanOrEqual.class);
+
     public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorAnd>> OPERATOR_BIT_AND =
             SPELL_PIECES.register(LibPieceNames.OPERATOR_BIT_AND, () -> PieceOperatorAnd.class);
 
@@ -86,6 +101,11 @@ public final class ModSpellPieces {
             ADVANCEMENT_GROUPS.register(LibPieceGroups.NUMBERS_INTRO,
                     () -> Arrays.asList(
                             PieceOperatorEqual.class,
+                            PieceOperatorUnEqual.class,
+                            PieceOperatorGreaterThan.class,
+                            PieceOperatorGreaterThanOrEqual.class,
+                            PieceOperatorLessThan.class,
+                            PieceOperatorLessThanOrEqual.class,
                             PieceOperatorAnd.class,
                             PieceOperatorLogicalRShift.class,
                             PieceOperatorLShift.class,
