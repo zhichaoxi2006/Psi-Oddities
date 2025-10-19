@@ -22,6 +22,8 @@
   "psi_oddities.spellpiece.trick_mass_attack.desc": "deal damage everybody",
   "psi_oddities.spellpiece.selector_bullet_in_cad": "Selector: Bullet In CAD",
   "psi_oddities.spellpiece.selector_bullet_in_cad.desc": "Select bullet in CAD",
+  "psi_oddities.spellpiece.operator_traverse": "Operator: Traverse",
+  "psi_oddities.spellpiece.operator_traverse.desc": "The spell block executed after this spell block shall be repeated N times (where N is the size of the input entity list).",
   "psi_oddities.spellpiece.trick_attack": "Trick: Attack",
   "psi_oddities.spellpiece.trick_attack.desc": "deal damage to target",
   "psi_oddities.spellpiece.trick_nullify_defense": "Trick: Nullify Defense",

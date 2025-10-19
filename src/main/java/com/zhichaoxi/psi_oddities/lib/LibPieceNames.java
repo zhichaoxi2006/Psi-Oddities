@@ -13,6 +13,7 @@ public final class LibPieceNames {
     public static final String SELECTOR_SAVED_ENTITY = "selector_saved_entity";
     public static final String SELECTOR_RECURSION_DEPTH = "selector_recursion_depth";
 
+    public static final String OPERATOR_TRAVERSE = "operator_traverse";
     public static final String OPERATOR_EQUAL = "operator_equal";
     public static final String OPERATOR_UNEQUAL = "operator_unequal";
     public static final String OPERATOR_GT = "operator_gt";

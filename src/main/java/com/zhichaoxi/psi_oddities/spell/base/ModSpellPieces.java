@@ -2,6 +2,7 @@ package com.zhichaoxi.psi_oddities.spell.base;
 
 import com.zhichaoxi.psi_oddities.PsiOddities;
 import com.zhichaoxi.psi_oddities.lib.LibPieceNames;
+import com.zhichaoxi.psi_oddities.spell.operator.entity.PieceOperatorTraverse;
 import com.zhichaoxi.psi_oddities.spell.operator.math.*;
 import com.zhichaoxi.psi_oddities.spell.operator.math.bitwise.*;
 import com.zhichaoxi.psi_oddities.spell.operator.string.*;
@@ -166,6 +167,9 @@ public final class ModSpellPieces {
     public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceSelectorBulletInCAD>> SELECTOR_BULLET_IN_CAD =
             SPELL_PIECES.register(LibPieceNames.SELECTOR_BULLET_IN_CAD, () -> PieceSelectorBulletInCAD.class);
 
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorTraverse>> OPERATOR_TRAVERSE =
+            SPELL_PIECES.register(LibPieceNames.OPERATOR_TRAVERSE, () -> PieceOperatorTraverse.class);
+
     public static final DeferredHolder<Collection<Class<? extends SpellPiece>>, Collection<Class<? extends SpellPiece>>> MISC =
             ADVANCEMENT_GROUPS.register(LibPieceGroups.MISC_TRICKS,
                     () -> Arrays.asList(
@@ -173,6 +177,7 @@ public final class ModSpellPieces {
                             PieceTrickDispel.class,
                             PieceTrickCast.class,
                             PieceSelectorRecursionDepth.class,
-                            PieceSelectorBulletInCAD.class
+                            PieceSelectorBulletInCAD.class,
+                            PieceOperatorTraverse.class
                     ));
 }

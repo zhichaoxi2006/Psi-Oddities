@@ -107,6 +107,9 @@ public class SpellPieceMaterial {
     public static final DeferredHolder<Material, Material> SELECTOR_RECURSION_DEPTH =
             registerMaterial(LibPieceNames.SELECTOR_RECURSION_DEPTH);
 
+    public static final DeferredHolder<Material, Material> OPERATOR_TRAVERSE =
+            registerMaterial(LibPieceNames.OPERATOR_TRAVERSE);
+
     private static DeferredHolder<Material, Material> registerMaterial(String name) {
         return SPELL_PIECE_MATERIAL.register(name,
                 () -> new Material(InventoryMenu.BLOCK_ATLAS, location(name)));
