@@ -20,7 +20,7 @@ public class CapablityHandler {
                 (stack, ctx) -> new EnergyStorageItemstack(1000000, stack),
                 ModItems.fluxDrive);
         event.registerItem(ModCapabilities.ADDITIONAL_PSI_HANDLER_ITEM,
-                (stack, ctx) -> new EnergyAdditionalPsiHander(stack),
+                (stack, ctx) -> new EnergyAdditionalPsiHandler(stack),
                 ModItems.fluxDrive);
 
         event.registerItem(

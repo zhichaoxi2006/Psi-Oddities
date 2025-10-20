@@ -3,6 +3,7 @@ package com.zhichaoxi.psi_oddities.spell.trick.entity;
 import com.zhichaoxi.psi_oddities.component.ModComponents;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.boss.EnderDragonPart;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.entity.PartEntity;
 import vazkii.psi.api.PsiAPI;
@@ -11,6 +12,7 @@ import vazkii.psi.api.spell.*;
 import vazkii.psi.api.spell.param.ParamEntity;
 import vazkii.psi.api.spell.param.ParamNumber;
 import vazkii.psi.api.spell.piece.PieceTrick;
+import vazkii.psi.common.core.handler.PlayerDataHandler;
 
 import java.util.ArrayList;
 import java.util.List;
