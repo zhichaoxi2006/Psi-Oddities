@@ -82,5 +82,6 @@
   "psi_oddities.spellpiece.trick_cast": "Trick: Cast",
   "psi_oddities.spellpiece.trick_cast.desc": "Cast the bullet",
   "psi_oddities.spellpiece.selector_recursion_depth": "Selector: Recursion Depth",
-  "psi_oddities.spellpiece.selector_recursion_depth.desc": "Selects the CAD's recursion depth "
+  "psi_oddities.spellpiece.selector_recursion_depth.desc": "Selects the CAD's recursion depth ",
+  "psi_oddities.event.blocked": "\u00a7bEvent\u00a77: Shield Blocked"
 }
