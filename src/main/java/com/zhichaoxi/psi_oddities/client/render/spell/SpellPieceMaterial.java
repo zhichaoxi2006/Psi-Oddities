@@ -110,6 +110,12 @@ public class SpellPieceMaterial {
     public static final DeferredHolder<Material, Material> OPERATOR_TRAVERSE =
             registerMaterial(LibPieceNames.OPERATOR_TRAVERSE);
 
+    public static final DeferredHolder<Material, Material> TRICK_REPAIR =
+            registerMaterial(LibPieceNames.TRICK_REPAIR);
+
+    public static final DeferredHolder<Material, Material> OPERATOR_GET_DAMAGE =
+            registerMaterial(LibPieceNames.OPERATOR_GET_DAMAGE);
+
     private static DeferredHolder<Material, Material> registerMaterial(String name) {
         return SPELL_PIECE_MATERIAL.register(name,
                 () -> new Material(InventoryMenu.BLOCK_ATLAS, location(name)));

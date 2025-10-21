@@ -9,6 +9,7 @@ public final class LibPieceNames {
     public static final String TRICK_SAVE_ENTITY = "trick_save_entity";
     public static final String TRICK_CAST = "trick_cast";
     public static final String SELECTOR_BULLET_IN_CAD = "selector_bullet_in_cad";
+    public static final String TRICK_REPAIR = "trick_repair";
 
     public static final String SELECTOR_SAVED_ENTITY = "selector_saved_entity";
     public static final String SELECTOR_RECURSION_DEPTH = "selector_recursion_depth";
@@ -33,5 +34,6 @@ public final class LibPieceNames {
     public static final String OPERATOR_STRING_CONCATENATE = "operator_string_concatenate";
     public static final String OPERATOR_STRING_JOIN = "operator_string_join";
     public static final String OPERATOR_GET_COMMENT_VECTOR = "operator_get_comment_vector";
+    public static final String OPERATOR_GET_DAMAGE = "operator_get_damage";
 
 }

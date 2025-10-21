@@ -2,6 +2,7 @@ package com.zhichaoxi.psi_oddities.spell.base;
 
 import com.zhichaoxi.psi_oddities.PsiOddities;
 import com.zhichaoxi.psi_oddities.lib.LibPieceNames;
+import com.zhichaoxi.psi_oddities.spell.operator.PieceOperatorGetDamage;
 import com.zhichaoxi.psi_oddities.spell.operator.entity.PieceOperatorTraverse;
 import com.zhichaoxi.psi_oddities.spell.operator.math.*;
 import com.zhichaoxi.psi_oddities.spell.operator.math.bitwise.*;
@@ -10,6 +11,7 @@ import com.zhichaoxi.psi_oddities.spell.selector.PieceSelectorRecursionDepth;
 import com.zhichaoxi.psi_oddities.spell.selector.entity.PieceSelectorSavedEntity;
 import com.zhichaoxi.psi_oddities.spell.selector.itemstack.PieceSelectorBulletInCAD;
 import com.zhichaoxi.psi_oddities.spell.trick.PieceTrickCast;
+import com.zhichaoxi.psi_oddities.spell.trick.PieceTrickRepair;
 import com.zhichaoxi.psi_oddities.spell.trick.blink.PieceTrickCasterBlink;
 import com.zhichaoxi.psi_oddities.spell.trick.entity.*;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -170,6 +172,12 @@ public final class ModSpellPieces {
     public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorTraverse>> OPERATOR_TRAVERSE =
             SPELL_PIECES.register(LibPieceNames.OPERATOR_TRAVERSE, () -> PieceOperatorTraverse.class);
 
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickRepair>> TRICK_REPAIR =
+            SPELL_PIECES.register(LibPieceNames.TRICK_REPAIR, () -> PieceTrickRepair.class);
+
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorGetDamage>> OPERATOR_GET_DAMAGE =
+            SPELL_PIECES.register(LibPieceNames.OPERATOR_GET_DAMAGE, () -> PieceOperatorGetDamage.class);
+
     public static final DeferredHolder<Collection<Class<? extends SpellPiece>>, Collection<Class<? extends SpellPiece>>> MISC =
             ADVANCEMENT_GROUPS.register(LibPieceGroups.MISC_TRICKS,
                     () -> Arrays.asList(
@@ -178,6 +186,8 @@ public final class ModSpellPieces {
                             PieceTrickCast.class,
                             PieceSelectorRecursionDepth.class,
                             PieceSelectorBulletInCAD.class,
-                            PieceOperatorTraverse.class
+                            PieceOperatorTraverse.class,
+                            PieceTrickRepair.class,
+                            PieceOperatorGetDamage.class
                     ));
 }

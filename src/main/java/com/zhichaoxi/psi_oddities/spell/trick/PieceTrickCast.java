@@ -57,7 +57,10 @@ public class PieceTrickCast extends PieceTrick {
         boolean did;
         try {
             did = ItemCAD.cast(caster.level(), caster, data, bullet, cadStack, 0, 0, 0.0F,
-                    ctx -> ctx.customData.put("cast_depth", cast_depth + 1) ).isPresent();
+                    ctx -> {
+                ctx.customData.put("cast_depth", cast_depth + 1);
+                ctx.tool = context.tool;
+            }).isPresent();
         } catch (StackOverflowError error) {
             throw new SpellRuntimeException(ErrorUtil.STACK_OVERFLOW);
         }
