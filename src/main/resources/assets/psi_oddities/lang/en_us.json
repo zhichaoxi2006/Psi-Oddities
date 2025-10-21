@@ -19,6 +19,8 @@
   "item.psi_oddities.psimetal_shield": "Psimetal Shield",
 
 
+  "psi_oddities.spellpiece.trick_heal": "Trick: Heal",
+  "psi_oddities.spellpiece.trick_heal.desc": "Heal target with your PSI energy",
   "psi_oddities.spellpiece.trick_repair": "Trick: Repair",
   "psi_oddities.spellpiece.trick_repair.desc": "Imbues Psimetal tools and armor with your PSI energy",
   "psi_oddities.spellpiece.operator_get_damage": "Operator: Get Damage",

@@ -116,6 +116,9 @@ public class SpellPieceMaterial {
     public static final DeferredHolder<Material, Material> OPERATOR_GET_DAMAGE =
             registerMaterial(LibPieceNames.OPERATOR_GET_DAMAGE);
 
+    public static final DeferredHolder<Material, Material> TRICK_HEAL =
+            registerMaterial(LibPieceNames.TRICK_HEAL);
+
     private static DeferredHolder<Material, Material> registerMaterial(String name) {
         return SPELL_PIECE_MATERIAL.register(name,
                 () -> new Material(InventoryMenu.BLOCK_ATLAS, location(name)));

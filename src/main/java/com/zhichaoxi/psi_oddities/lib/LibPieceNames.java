@@ -10,6 +10,7 @@ public final class LibPieceNames {
     public static final String TRICK_CAST = "trick_cast";
     public static final String SELECTOR_BULLET_IN_CAD = "selector_bullet_in_cad";
     public static final String TRICK_REPAIR = "trick_repair";
+    public static final String TRICK_HEAL = "trick_heal";
 
     public static final String SELECTOR_SAVED_ENTITY = "selector_saved_entity";
     public static final String SELECTOR_RECURSION_DEPTH = "selector_recursion_depth";

@@ -178,6 +178,9 @@ public final class ModSpellPieces {
     public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorGetDamage>> OPERATOR_GET_DAMAGE =
             SPELL_PIECES.register(LibPieceNames.OPERATOR_GET_DAMAGE, () -> PieceOperatorGetDamage.class);
 
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickHeal>> TRICK_HEAL =
+            SPELL_PIECES.register(LibPieceNames.TRICK_HEAL, () -> PieceTrickHeal.class);
+
     public static final DeferredHolder<Collection<Class<? extends SpellPiece>>, Collection<Class<? extends SpellPiece>>> MISC =
             ADVANCEMENT_GROUPS.register(LibPieceGroups.MISC_TRICKS,
                     () -> Arrays.asList(
@@ -188,6 +191,7 @@ public final class ModSpellPieces {
                             PieceSelectorBulletInCAD.class,
                             PieceOperatorTraverse.class,
                             PieceTrickRepair.class,
-                            PieceOperatorGetDamage.class
+                            PieceOperatorGetDamage.class,
+                            PieceTrickHeal.class
                     ));
 }
