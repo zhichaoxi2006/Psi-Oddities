@@ -1,24 +1,34 @@
 {
   "itemGroup.psi_oddities": "Psi Oddities",
 
+
+
   "psi_oddities.spellparam.item_stack": "ItemStack",
+  "psi_oddities.spellparam.spell": "Spell",
   "psi_oddities.spellparam.param1": "Param A",
   "psi_oddities.spellparam.param2": "Param B",
   "psi_oddities.spellparam.param3": "Param C",
 
   "psi.data_type.item_stack": "ItemStack",
+  "psi.data_type.spell": "Spell",
 
   "psi_oddities.spellerror.stack_overflow": "ERROR: Stack Overflow",
   "psi_oddities.spellerror.cast_failed": "ERROR: Cast Failed",
   "psi_oddities.spellerror.nan_comment": "ERROR: Comment value is not a number",
   "psi_oddities.spellerror.null_string": "ERROR: String must not be null",
+  "psi_oddities.spellerror.null_item_stack": "ERROR: ItemStack must not be null",
 
   "psi_oddities.not_enough_psi": "CAUSALITY ENFORCED: Insufficient Psi to satisfy the spell requirements.",
   "item.psi_oddities.cad_battery_the_dirac_sanction": "The Dirac Sanction",
   "item.psi_oddities.flux_drive": "Flux Drive",
   "item.psi_oddities.psimetal_shield": "Psimetal Shield",
 
-
+  "psi_oddities.spellpiece.selector_current_spell": "Selector: Current Spell",
+  "psi_oddities.spellpiece.selector_current_spell.desc": "Get current casting spell",
+  "psi_oddities.spellpiece.operator_spell_bullet_virtualization": "Operator: Spell Bullet Virtualization",
+  "psi_oddities.spellpiece.operator_spell_bullet_virtualization.desc": "Construct a virtualized spell bullet",
+  "psi_oddities.spellpiece.selector_get_bullet": "Selector: Get Bullet",
+  "psi_oddities.spellpiece.selector_get_bullet.desc": "Select a spell bullet",
   "psi_oddities.spellpiece.trick_heal": "Trick: Heal",
   "psi_oddities.spellpiece.trick_heal.desc": "Heal target with your PSI energy",
   "psi_oddities.spellpiece.trick_repair": "Trick: Repair",

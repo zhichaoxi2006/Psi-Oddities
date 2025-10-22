@@ -5,6 +5,7 @@ import com.zhichaoxi.psi_oddities.spell.param.ParamItemStack;
 import com.zhichaoxi.psi_oddities.util.ErrorUtil;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.CropBlock;
 import vazkii.psi.api.PsiAPI;
 import vazkii.psi.api.spell.*;
 import vazkii.psi.api.spell.piece.PieceTrick;
@@ -69,6 +70,8 @@ public class PieceTrickCast extends PieceTrick {
             throw new SpellRuntimeException(ErrorUtil.CAST_FAILED);
         }
 
+
+        CropBlock
         return null;
     }
 }

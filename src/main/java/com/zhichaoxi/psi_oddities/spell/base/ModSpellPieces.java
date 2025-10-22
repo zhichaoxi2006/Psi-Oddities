@@ -6,10 +6,13 @@ import com.zhichaoxi.psi_oddities.spell.operator.PieceOperatorGetDamage;
 import com.zhichaoxi.psi_oddities.spell.operator.entity.PieceOperatorTraverse;
 import com.zhichaoxi.psi_oddities.spell.operator.math.*;
 import com.zhichaoxi.psi_oddities.spell.operator.math.bitwise.*;
+import com.zhichaoxi.psi_oddities.spell.operator.spell.PieceOperatorSpellBulletVirtualization;
 import com.zhichaoxi.psi_oddities.spell.operator.string.*;
 import com.zhichaoxi.psi_oddities.spell.selector.PieceSelectorRecursionDepth;
 import com.zhichaoxi.psi_oddities.spell.selector.entity.PieceSelectorSavedEntity;
 import com.zhichaoxi.psi_oddities.spell.selector.itemstack.PieceSelectorBulletInCAD;
+import com.zhichaoxi.psi_oddities.spell.selector.itemstack.PieceSelectorGetBullet;
+import com.zhichaoxi.psi_oddities.spell.selector.spell.PieceSelectorCurrentSpell;
 import com.zhichaoxi.psi_oddities.spell.trick.PieceTrickCast;
 import com.zhichaoxi.psi_oddities.spell.trick.PieceTrickRepair;
 import com.zhichaoxi.psi_oddities.spell.trick.blink.PieceTrickCasterBlink;
@@ -181,6 +184,15 @@ public final class ModSpellPieces {
     public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickHeal>> TRICK_HEAL =
             SPELL_PIECES.register(LibPieceNames.TRICK_HEAL, () -> PieceTrickHeal.class);
 
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceSelectorCurrentSpell>> SELECTOR_CURRENT_SPELL =
+            SPELL_PIECES.register(LibPieceNames.SELECTOR_CURRENT_SPELL, () -> PieceSelectorCurrentSpell.class);
+
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceOperatorSpellBulletVirtualization>> OPERATOR_SPELL_BULLET_VIRTUALIZATION =
+            SPELL_PIECES.register(LibPieceNames.OPERATOR_SPELL_BULLET_VIRTUALIZATION, () -> PieceOperatorSpellBulletVirtualization.class);
+
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceSelectorGetBullet>> SELECTOR_GET_BULLET =
+            SPELL_PIECES.register(LibPieceNames.SELECTOR_GET_BULLET, () -> PieceSelectorGetBullet.class);
+
     public static final DeferredHolder<Collection<Class<? extends SpellPiece>>, Collection<Class<? extends SpellPiece>>> MISC =
             ADVANCEMENT_GROUPS.register(LibPieceGroups.MISC_TRICKS,
                     () -> Arrays.asList(
@@ -192,6 +204,9 @@ public final class ModSpellPieces {
                             PieceOperatorTraverse.class,
                             PieceTrickRepair.class,
                             PieceOperatorGetDamage.class,
-                            PieceTrickHeal.class
+                            PieceTrickHeal.class,
+                            PieceSelectorCurrentSpell.class,
+                            PieceOperatorSpellBulletVirtualization.class,
+                            PieceSelectorGetBullet.class
                     ));
 }

@@ -27,6 +27,8 @@ public class DataGenerator {
             PsiOdditiesBlockTagsProvider blockTagProvider = new PsiOdditiesBlockTagsProvider(packOutput, lookupProvider, existingFileHelper);
             generator.addProvider(true, blockTagProvider);
             generator.addProvider(true,
+                    new PsiOdditiesDamageTypeTagsProvider(packOutput, lookupProvider, existingFileHelper));
+            generator.addProvider(true,
                     new PsiOdditiesRecipeGenerator(event.getGenerator().getPackOutput(), event.getLookupProvider()));
             generator.addProvider(true,
                     new PsiOdditiesItemTagProvider(packOutput, lookupProvider, blockTagProvider.contentsGetter(), existingFileHelper));

@@ -119,6 +119,15 @@ public class SpellPieceMaterial {
     public static final DeferredHolder<Material, Material> TRICK_HEAL =
             registerMaterial(LibPieceNames.TRICK_HEAL);
 
+    public static final DeferredHolder<Material, Material> SELECTOR_CURRENT_SPELL =
+            registerMaterial(LibPieceNames.SELECTOR_CURRENT_SPELL);
+
+    public static final DeferredHolder<Material, Material> OPERATOR_SPELL_BULLET_VIRTUALIZATION =
+            registerMaterial(LibPieceNames.OPERATOR_SPELL_BULLET_VIRTUALIZATION);
+
+    public static final DeferredHolder<Material, Material> SELECTOR_GET_BULLET =
+            registerMaterial(LibPieceNames.SELECTOR_GET_BULLET);
+
     private static DeferredHolder<Material, Material> registerMaterial(String name) {
         return SPELL_PIECE_MATERIAL.register(name,
                 () -> new Material(InventoryMenu.BLOCK_ATLAS, location(name)));

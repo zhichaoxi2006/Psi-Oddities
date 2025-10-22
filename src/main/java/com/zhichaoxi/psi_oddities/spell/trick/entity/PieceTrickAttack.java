@@ -1,12 +1,12 @@
 package com.zhichaoxi.psi_oddities.spell.trick.entity;
 
+import com.zhichaoxi.psi_oddities.lib.LibResources;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import vazkii.psi.api.spell.*;
 import vazkii.psi.api.spell.param.ParamEntity;
 import vazkii.psi.api.spell.param.ParamNumber;
 import vazkii.psi.api.spell.piece.PieceTrick;
-import vazkii.psi.common.lib.LibResources;
 
 public class PieceTrickAttack extends PieceTrick {
 
@@ -44,7 +44,7 @@ public class PieceTrickAttack extends PieceTrick {
         if (!context.isInRadius(targetVal)) {
             throw new SpellRuntimeException(SpellRuntimeException.OUTSIDE_RADIUS);
         }
-        targetVal.hurt(targetVal.damageSources().source(LibResources.PSI_OVERLOAD, caster), damageVal);
+        targetVal.hurt(targetVal.damageSources().source(LibResources.SPELL, caster), damageVal);
     }
 
     @Override

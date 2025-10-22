@@ -14,7 +14,10 @@ public final class LibPieceNames {
 
     public static final String SELECTOR_SAVED_ENTITY = "selector_saved_entity";
     public static final String SELECTOR_RECURSION_DEPTH = "selector_recursion_depth";
+    public static final String SELECTOR_CURRENT_SPELL = "selector_current_spell";
+    public static final String SELECTOR_GET_BULLET = "selector_get_bullet";
 
+    public static final String OPERATOR_SPELL_BULLET_VIRTUALIZATION = "operator_spell_bullet_virtualization";
     public static final String OPERATOR_TRAVERSE = "operator_traverse";
     public static final String OPERATOR_EQUAL = "operator_equal";
     public static final String OPERATOR_UNEQUAL = "operator_unequal";

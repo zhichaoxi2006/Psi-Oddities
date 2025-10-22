@@ -2,12 +2,10 @@ package com.zhichaoxi.psi_oddities.spell.trick.entity;
 
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import vazkii.psi.api.spell.*;
 import vazkii.psi.api.spell.param.ParamEntity;
 import vazkii.psi.api.spell.param.ParamNumber;
 import vazkii.psi.api.spell.piece.PieceTrick;
-import vazkii.psi.common.lib.LibResources;
 
 public class PieceTrickHeal extends PieceTrick {
 
