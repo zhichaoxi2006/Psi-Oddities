@@ -70,8 +70,6 @@ public class PieceTrickCast extends PieceTrick {
             throw new SpellRuntimeException(ErrorUtil.CAST_FAILED);
         }
 
-
-        CropBlock
         return null;
     }
 }
