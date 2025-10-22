@@ -193,6 +193,9 @@ public final class ModSpellPieces {
     public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceSelectorGetBullet>> SELECTOR_GET_BULLET =
             SPELL_PIECES.register(LibPieceNames.SELECTOR_GET_BULLET, () -> PieceSelectorGetBullet.class);
 
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickCleanse>> TRICK_CLEANSE =
+            SPELL_PIECES.register(LibPieceNames.TRICK_CLEANSE, () -> PieceTrickCleanse.class);
+
     public static final DeferredHolder<Collection<Class<? extends SpellPiece>>, Collection<Class<? extends SpellPiece>>> MISC =
             ADVANCEMENT_GROUPS.register(LibPieceGroups.MISC_TRICKS,
                     () -> Arrays.asList(
@@ -207,6 +210,7 @@ public final class ModSpellPieces {
                             PieceTrickHeal.class,
                             PieceSelectorCurrentSpell.class,
                             PieceOperatorSpellBulletVirtualization.class,
-                            PieceSelectorGetBullet.class
+                            PieceSelectorGetBullet.class,
+                            PieceTrickCleanse.class
                     ));
 }

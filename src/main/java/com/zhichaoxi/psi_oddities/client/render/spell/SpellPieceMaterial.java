@@ -128,6 +128,9 @@ public class SpellPieceMaterial {
     public static final DeferredHolder<Material, Material> SELECTOR_GET_BULLET =
             registerMaterial(LibPieceNames.SELECTOR_GET_BULLET);
 
+    public static final DeferredHolder<Material, Material> TRICK_CLEANSE =
+            registerMaterial(LibPieceNames.TRICK_CLEANSE);
+
     private static DeferredHolder<Material, Material> registerMaterial(String name) {
         return SPELL_PIECE_MATERIAL.register(name,
                 () -> new Material(InventoryMenu.BLOCK_ATLAS, location(name)));

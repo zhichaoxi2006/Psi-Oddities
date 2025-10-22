@@ -23,6 +23,8 @@
   "item.psi_oddities.flux_drive": "Flux Drive",
   "item.psi_oddities.psimetal_shield": "Psimetal Shield",
 
+  "psi_oddities.spellpiece.trick_cleanse": "Trick: Cleanse",
+  "psi_oddities.spellpiece.trick_cleanse.desc": "cleanse target of harmful status effects.",
   "psi_oddities.spellpiece.selector_current_spell": "Selector: Current Spell",
   "psi_oddities.spellpiece.selector_current_spell.desc": "Get current casting spell",
   "psi_oddities.spellpiece.operator_spell_bullet_virtualization": "Operator: Spell Bullet Virtualization",
