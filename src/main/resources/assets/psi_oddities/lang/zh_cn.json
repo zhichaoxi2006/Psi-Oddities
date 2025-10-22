@@ -16,6 +16,8 @@
   "item.psi_oddities.cad_battery_the_dirac_sanction": "狄拉克制裁",
   "item.psi_oddities.flux_drive": "通量驱动器",
   "item.psi_oddities.psimetal_shield": "Psi金属盾",
+  "psi_oddities.spellpiece.trick_cleanse": "启动式：净化",
+  "psi_oddities.spellpiece.trick_cleanse.desc": "净化目标的负面状态效果",
   "psi_oddities.spellpiece.selector_current_spell": "选择符：当前术式",
   "psi_oddities.spellpiece.selector_current_spell.desc": "获取当前释放的术式",
   "psi_oddities.spellpiece.operator_spell_bullet_virtualization": "运算符：术式子弹虚拟化",
