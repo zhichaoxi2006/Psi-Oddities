@@ -156,6 +156,8 @@ dependencies {
     runtimeOnly("curse.maven:mekanism-268560:7017663")
 
 
+    runtimeOnly("curse.maven:powerful-dummy-1276893:6956101")
+
     compileOnly "io.redspace:irons_spellbooks:${irons_spells_version}:api"
     runtimeOnly "io.redspace:irons_spellbooks:${irons_spells_version}"
 

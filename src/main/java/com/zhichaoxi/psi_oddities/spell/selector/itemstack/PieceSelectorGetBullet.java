@@ -2,7 +2,6 @@ package com.zhichaoxi.psi_oddities.spell.selector.itemstack;
 
 import com.zhichaoxi.psi_oddities.util.ErrorUtil;
 import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import vazkii.psi.api.PsiAPI;
 import vazkii.psi.api.cad.ISocketable;

@@ -5,7 +5,6 @@ import com.zhichaoxi.psi_oddities.spell.base.SpellParams;
 import com.zhichaoxi.psi_oddities.spell.param.ParamSpell;
 import net.minecraft.world.item.ItemStack;
 import vazkii.psi.api.spell.*;
-import vazkii.psi.api.spell.param.ParamNumber;
 import vazkii.psi.api.spell.piece.PieceOperator;
 import vazkii.psi.common.item.ItemSpellDrive;
 import vazkii.psi.common.item.base.ModItems;
