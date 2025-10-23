@@ -5,24 +5,30 @@
 
   "psi_oddities.spellparam.item_stack": "ItemStack",
   "psi_oddities.spellparam.spell": "Spell",
+  "psi_oddities.spellparam.id": "ID",
   "psi_oddities.spellparam.param1": "Param A",
   "psi_oddities.spellparam.param2": "Param B",
   "psi_oddities.spellparam.param3": "Param C",
 
   "psi.data_type.item_stack": "ItemStack",
   "psi.data_type.spell": "Spell",
+  "psi.data_type.string": "String",
 
   "psi_oddities.spellerror.stack_overflow": "ERROR: Stack Overflow",
   "psi_oddities.spellerror.cast_failed": "ERROR: Cast Failed",
   "psi_oddities.spellerror.nan_comment": "ERROR: Comment value is not a number",
   "psi_oddities.spellerror.null_string": "ERROR: String must not be null",
   "psi_oddities.spellerror.null_item_stack": "ERROR: ItemStack must not be null",
+  "psi_oddities.spellerror.invaild_spell_acceptor": "ERROR: Invaild Spell Acceptor",
+  "psi_oddities.spellerror.invaild_sound_event": "ERROR: Invaild Sound Event",
 
   "psi_oddities.not_enough_psi": "CAUSALITY ENFORCED: Insufficient Psi to satisfy the spell requirements.",
   "item.psi_oddities.cad_battery_the_dirac_sanction": "The Dirac Sanction",
   "item.psi_oddities.flux_drive": "Flux Drive",
   "item.psi_oddities.psimetal_shield": "Psimetal Shield",
 
+  "psi_oddities.spellpiece.trick_play_music": "Trick: Play Music",
+  "psi_oddities.spellpiece.trick_play_music.desc": "Play the specified music",
   "psi_oddities.spellpiece.trick_cleanse": "Trick: Cleanse",
   "psi_oddities.spellpiece.trick_cleanse.desc": "Cleanse target of harmful status effects.",
   "psi_oddities.spellpiece.selector_current_spell": "Selector: Current Spell",

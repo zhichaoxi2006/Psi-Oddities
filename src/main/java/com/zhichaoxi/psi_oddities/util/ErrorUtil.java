@@ -11,6 +11,7 @@ public class ErrorUtil {
     public static final String NULL_VECTOR = "psi_oddities.spellerror.null_vector";
     public static final String NULL_ITEM_STACK = "psi_oddities.spellerror.null_item_stack";
     public static final String INVAILD_SPELL_ACCEPTOR  = "psi_oddities.spellerror.invaild_spell_acceptor";
+    public static final String INVAILD_SOUND_EVENT  = "psi_oddities.spellerror.invaild_sound_event";
 
     public static void compile(String reason, int x, int y) throws SpellCompilationException {
         throw new SpellCompilationException(reason, x, y);

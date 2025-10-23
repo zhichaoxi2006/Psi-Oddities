@@ -14,6 +14,7 @@ import com.zhichaoxi.psi_oddities.spell.selector.itemstack.PieceSelectorBulletIn
 import com.zhichaoxi.psi_oddities.spell.selector.itemstack.PieceSelectorGetBullet;
 import com.zhichaoxi.psi_oddities.spell.selector.spell.PieceSelectorCurrentSpell;
 import com.zhichaoxi.psi_oddities.spell.trick.PieceTrickCast;
+import com.zhichaoxi.psi_oddities.spell.trick.PieceTrickPlayMusic;
 import com.zhichaoxi.psi_oddities.spell.trick.PieceTrickRepair;
 import com.zhichaoxi.psi_oddities.spell.trick.blink.PieceTrickCasterBlink;
 import com.zhichaoxi.psi_oddities.spell.trick.entity.*;
@@ -196,6 +197,9 @@ public final class ModSpellPieces {
     public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickCleanse>> TRICK_CLEANSE =
             SPELL_PIECES.register(LibPieceNames.TRICK_CLEANSE, () -> PieceTrickCleanse.class);
 
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickPlayMusic>> TRICK_PLAY_MUSIC =
+            SPELL_PIECES.register(LibPieceNames.TRICK_PLAY_MUSIC, () -> PieceTrickPlayMusic.class);
+
     public static final DeferredHolder<Collection<Class<? extends SpellPiece>>, Collection<Class<? extends SpellPiece>>> MISC =
             ADVANCEMENT_GROUPS.register(LibPieceGroups.MISC_TRICKS,
                     () -> Arrays.asList(
@@ -211,6 +215,7 @@ public final class ModSpellPieces {
                             PieceSelectorCurrentSpell.class,
                             PieceOperatorSpellBulletVirtualization.class,
                             PieceSelectorGetBullet.class,
-                            PieceTrickCleanse.class
+                            PieceTrickCleanse.class,
+                            PieceTrickPlayMusic.class
                     ));
 }
