@@ -17,6 +17,7 @@ import com.zhichaoxi.psi_oddities.spell.trick.PieceTrickCast;
 import com.zhichaoxi.psi_oddities.spell.trick.PieceTrickPlayMusic;
 import com.zhichaoxi.psi_oddities.spell.trick.PieceTrickRepair;
 import com.zhichaoxi.psi_oddities.spell.trick.blink.PieceTrickCasterBlink;
+import com.zhichaoxi.psi_oddities.spell.trick.blink.PieceTrickTeleport;
 import com.zhichaoxi.psi_oddities.spell.trick.entity.*;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -200,6 +201,9 @@ public final class ModSpellPieces {
     public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickPlayMusic>> TRICK_PLAY_MUSIC =
             SPELL_PIECES.register(LibPieceNames.TRICK_PLAY_MUSIC, () -> PieceTrickPlayMusic.class);
 
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickTeleport>> TRICK_TELEPORT =
+            SPELL_PIECES.register(LibPieceNames.TRICK_TELEPORT, () -> PieceTrickTeleport.class);
+
     public static final DeferredHolder<Collection<Class<? extends SpellPiece>>, Collection<Class<? extends SpellPiece>>> MISC =
             ADVANCEMENT_GROUPS.register(LibPieceGroups.MISC_TRICKS,
                     () -> Arrays.asList(
@@ -216,6 +220,7 @@ public final class ModSpellPieces {
                             PieceOperatorSpellBulletVirtualization.class,
                             PieceSelectorGetBullet.class,
                             PieceTrickCleanse.class,
-                            PieceTrickPlayMusic.class
+                            PieceTrickPlayMusic.class,
+                            PieceTrickTeleport.class
                     ));
 }

@@ -27,6 +27,8 @@
   "item.psi_oddities.flux_drive": "Flux Drive",
   "item.psi_oddities.psimetal_shield": "Psimetal Shield",
 
+  "psi_oddities.spellpiece.trick_teleport": "Trick: Teleport",
+  "psi_oddities.spellpiece.trick_teleport.desc": "Teleport target to any place",
   "psi_oddities.spellpiece.trick_play_music": "Trick: Play Music",
   "psi_oddities.spellpiece.trick_play_music.desc": "Play the specified music",
   "psi_oddities.spellpiece.trick_cleanse": "Trick: Cleanse",
