@@ -15,6 +15,7 @@ public final class LibPieceNames {
     public static final String TRICK_PLAY_MUSIC = "trick_play_music";
     public static final String TRICK_TELEPORT = "trick_teleport";
     public static final String TRICK_PSI_WING = "trick_psi_wing";
+    public static final String TRICK_HEALTH_REVERSAL = "trick_health_reversal";
 
     public static final String SELECTOR_SAVED_ENTITY = "selector_saved_entity";
     public static final String SELECTOR_RECURSION_DEPTH = "selector_recursion_depth";

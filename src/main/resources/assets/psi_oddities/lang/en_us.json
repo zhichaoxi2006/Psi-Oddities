@@ -29,6 +29,8 @@
   "item.psi_oddities.inline_caster": "Inline Caster",
   "item.psi_oddities.dying_exosuit_sensor": "Dying Exosuit Sensor",
 
+  "psi_oddities.spellpiece.trick_health_reversal": "Trick: Health Reversal",
+  "psi_oddities.spellpiece.trick_health_reversal.desc": "Takes the caster back in time, but it is only effective for health points",
   "psi_oddities.spellpiece.trick_psi_wing": "Trick: Psi Wing",
   "psi_oddities.spellpiece.trick_psi_wing.desc": "Summon a sheaf of PSI energy about target in the shape of wings, endowed with enough substance to allow gliding",
   "psi_oddities.spellpiece.trick_teleport": "Trick: Teleport",

@@ -1,6 +1,5 @@
 package com.zhichaoxi.psi_oddities.attachment;
 
-import com.mojang.serialization.Codec;
 import com.zhichaoxi.psi_oddities.PsiOddities;
 import net.neoforged.neoforge.attachment.AttachmentType;
 import net.neoforged.neoforge.registries.DeferredRegister;

@@ -140,6 +140,9 @@ public class SpellPieceMaterial {
     public static final DeferredHolder<Material, Material> TRICK_PSI_WING =
             registerMaterial(LibPieceNames.TRICK_PSI_WING);
 
+    public static final DeferredHolder<Material, Material> TRICK_HEALTH_REVERSAL =
+            registerMaterial(LibPieceNames.TRICK_HEALTH_REVERSAL);
+
     private static DeferredHolder<Material, Material> registerMaterial(String name) {
         return SPELL_PIECE_MATERIAL.register(name,
                 () -> new Material(InventoryMenu.BLOCK_ATLAS, location(name)));
