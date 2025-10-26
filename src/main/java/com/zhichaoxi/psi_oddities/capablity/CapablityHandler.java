@@ -26,21 +26,21 @@ public class CapablityHandler {
         event.registerItem(
                 Capabilities.ItemHandler.ITEM,
                 (itemStack, context) -> new ComponentItemHandler(itemStack, ModDataComponents.BULLETS.get(), 3),
-                ModItems.psimetalShield);
+                ModItems.psimetalShield, ModItems.inlineCaster);
 
         event.registerItem(
                 PsiAPI.PSI_BAR_DISPLAY_CAPABILITY,
                 (tool, ctx) -> new ToolSocketable(tool, 3),
-                ModItems.psimetalShield);
+                ModItems.psimetalShield, ModItems.inlineCaster);
 
         event.registerItem(
                 PsiAPI.SPELL_ACCEPTOR_CAPABILITY,
                 (tool, ctx) -> new ToolSocketable(tool, 3),
-                ModItems.psimetalShield);
+                ModItems.psimetalShield, ModItems.inlineCaster);
 
         event.registerItem(
                 PsiAPI.SOCKETABLE_CAPABILITY,
                 (tool, ctx) -> new ToolSocketable(tool, 3),
-                ModItems.psimetalShield);
+                ModItems.psimetalShield, ModItems.inlineCaster);
     }
 }
