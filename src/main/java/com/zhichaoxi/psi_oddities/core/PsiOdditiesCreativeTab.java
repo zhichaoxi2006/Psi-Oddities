@@ -27,6 +27,7 @@ public class PsiOdditiesCreativeTab {
                         output.accept(ModItems.fluxDrive);
                         output.accept(ModItems.psimetalShield);
                         output.accept(ModItems.inlineCaster);
+                        output.accept(ModItems.dyingExosuitSensor);
                     })
                     .build();
             creativeModeTabRegisterHelper.register(PSI_ODDITIES_CREATIVE_TAB, psiCreativeTab);

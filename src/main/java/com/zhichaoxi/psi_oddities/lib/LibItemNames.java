@@ -5,4 +5,5 @@ public class LibItemNames {
     public static String FLUX_DRIVE = "flux_drive";
     public static final String PSIMETAL_SHIELD = "psimetal_shield";
     public static final String INLINE_CASTER = "inline_caster";
+    public static final String EXOSUIT_SENSOR_DYING = "exosuit_sensor_dying";
 }

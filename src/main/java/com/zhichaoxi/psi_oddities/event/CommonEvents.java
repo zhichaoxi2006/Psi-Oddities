@@ -1,11 +1,13 @@
 package com.zhichaoxi.psi_oddities.event;
 
 import com.zhichaoxi.psi_oddities.PsiOddities;
+import com.zhichaoxi.psi_oddities.attachment.ModAttachments;
 import com.zhichaoxi.psi_oddities.attachment.PsiWingData;
-import com.zhichaoxi.psi_oddities.util.PsiWingUtil;
-import com.zhichaoxi.psi_tweaks.core.ModAttributes;
 import com.zhichaoxi.psi_oddities.item.ItemPsimetalShield;
 import com.zhichaoxi.psi_oddities.item.base.ModItems;
+import com.zhichaoxi.psi_oddities.util.PsiArmorUtil;
+import com.zhichaoxi.psi_oddities.util.PsiWingUtil;
+import com.zhichaoxi.psi_tweaks.core.ModAttributes;
 import com.zhichaoxi.psi_tweaks.util.PsiUtil;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.server.level.ServerPlayer;
@@ -21,22 +23,25 @@ import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.ItemAttributeModifierEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.neoforge.event.entity.living.LivingShieldBlockEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import vazkii.psi.api.PsiAPI;
 import vazkii.psi.api.cad.EnumCADComponent;
 import vazkii.psi.api.cad.ICAD;
 import vazkii.psi.api.cad.ISocketable;
-import vazkii.psi.api.internal.PsiRenderHelper;
-import vazkii.psi.api.internal.Vector3;
+import vazkii.psi.api.exosuit.PsiArmorEvent;
 import vazkii.psi.api.spell.PreSpellCastEvent;
 import vazkii.psi.api.spell.SpellContext;
-import vazkii.psi.common.Psi;
 import vazkii.psi.common.core.handler.PlayerDataHandler;
-import vazkii.psi.common.core.handler.PsiSoundHandler;
 import vazkii.psi.common.item.ItemCAD;
-import vazkii.psi.common.item.armor.*;
+import vazkii.psi.common.item.armor.ItemPsimetalExosuitBoots;
+import vazkii.psi.common.item.armor.ItemPsimetalExosuitChestplate;
+import vazkii.psi.common.item.armor.ItemPsimetalExosuitHelmet;
+import vazkii.psi.common.item.armor.ItemPsimetalExosuitLeggings;
 import vazkii.psi.common.item.tool.IPsimetalTool;
+
+import java.util.Stack;
 
 @EventBusSubscriber(modid = PsiOddities.MODID)
 public class CommonEvents {
@@ -72,15 +77,36 @@ public class CommonEvents {
         if (player instanceof LocalPlayer) {
             return;
         }
-        PsiWingData data = PsiWingUtil.getPsiWingData(player);
+
+        PlayerDataHandler.PlayerData data = PlayerDataHandler.get(player);
         ItemStack cad = PsiAPI.getPlayerCAD(player);
-        if (data.isEnabled() && data.getGracePeriod() == 0 && (player.onGround() || player.horizontalCollision)) {
+
+        float health = player.getHealth();
+        Stack<Float> healthChangelog = player.getData(ModAttachments.EIDOS_CHANGELOG);
+        if(healthChangelog.size() > 600) {
+            healthChangelog.removeFirst();
+        }
+        healthChangelog.push(health);
+
+        PsiWingData psiWingData = PsiWingUtil.getPsiWingData(player);
+        if (psiWingData.isEnabled() && psiWingData.getGracePeriod() == 0 && (player.onGround() || player.horizontalCollision)) {
             PsiWingUtil.disableWing(player);
         } else {
-            data.setGracePeriod(Math.max(data.getGracePeriod() - 1, 0));
+            psiWingData.setGracePeriod(Math.max(psiWingData.getGracePeriod() - 1, 0));
             if (player.level().random.nextFloat() < 0.02) {
                 player.level().playSound(null, player.getX(), player.getY(), player.getZ(),
                         SoundEvents.ELYTRA_FLYING, SoundSource.PLAYERS, 0.2f, 1f);
+            }
+        }
+    }
+
+    @SubscribeEvent
+    private static void onPlayerDeath(LivingDeathEvent event) {
+        LivingEntity entity = event.getEntity();
+        if (entity instanceof Player player) {
+            PsiArmorEvent.post(new PsiArmorEvent(player, PsiArmorUtil.ON_DYING));
+            if (player.getHealth() > 0) {
+                event.setCanceled(true);
             }
         }
     }

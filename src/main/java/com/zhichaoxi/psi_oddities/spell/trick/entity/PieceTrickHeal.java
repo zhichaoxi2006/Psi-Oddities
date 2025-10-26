@@ -37,7 +37,7 @@ public class PieceTrickHeal extends PieceTrick {
         meta.addStat(EnumSpellStat.COST, (int) (healVal * 20));
     }
 
-    public static void attack(SpellContext context, LivingEntity targetVal, float healVal) throws SpellRuntimeException {
+    public static void heal(SpellContext context, LivingEntity targetVal, float healVal) throws SpellRuntimeException {
         context.verifyEntity(targetVal);
         if (!context.isInRadius(targetVal)) {
             throw new SpellRuntimeException(SpellRuntimeException.OUTSIDE_RADIUS);
@@ -51,7 +51,7 @@ public class PieceTrickHeal extends PieceTrick {
         float healVal = this.getParamValue(context, number).floatValue();
 
         if (targetVal instanceof LivingEntity livingEntity) {
-            attack(context, livingEntity, healVal);
+            heal(context, livingEntity, healVal);
         }
 
         return null;

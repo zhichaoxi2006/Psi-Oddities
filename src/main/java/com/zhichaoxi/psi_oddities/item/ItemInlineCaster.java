@@ -1,7 +1,5 @@
 package com.zhichaoxi.psi_oddities.item;
 
-import dev.kosmx.playerAnim.mixin.ElytraLayerMixin;
-import net.minecraft.client.renderer.entity.layers.ElytraLayer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
