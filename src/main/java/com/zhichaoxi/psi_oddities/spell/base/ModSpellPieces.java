@@ -204,6 +204,9 @@ public final class ModSpellPieces {
     public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickTeleport>> TRICK_TELEPORT =
             SPELL_PIECES.register(LibPieceNames.TRICK_TELEPORT, () -> PieceTrickTeleport.class);
 
+    public static final DeferredHolder<Class<? extends SpellPiece>, Class<PieceTrickPsiWing>> TRICK_PSI_WING =
+            SPELL_PIECES.register(LibPieceNames.TRICK_PSI_WING, () -> PieceTrickPsiWing.class);
+
     public static final DeferredHolder<Collection<Class<? extends SpellPiece>>, Collection<Class<? extends SpellPiece>>> MISC =
             ADVANCEMENT_GROUPS.register(LibPieceGroups.MISC_TRICKS,
                     () -> Arrays.asList(
@@ -221,6 +224,7 @@ public final class ModSpellPieces {
                             PieceSelectorGetBullet.class,
                             PieceTrickCleanse.class,
                             PieceTrickPlayMusic.class,
-                            PieceTrickTeleport.class
+                            PieceTrickTeleport.class,
+                            PieceTrickPsiWing.class
                     ));
 }

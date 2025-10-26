@@ -27,6 +27,8 @@
   "item.psi_oddities.flux_drive": "Flux Drive",
   "item.psi_oddities.psimetal_shield": "Psimetal Shield",
 
+  "psi_oddities.spellpiece.trick_psi_wing": "Trick: Psi Wing",
+  "psi_oddities.spellpiece.trick_psi_wing.desc": "Summon a sheaf of PSI energy about target in the shape of wings, endowed with enough substance to allow gliding",
   "psi_oddities.spellpiece.trick_teleport": "Trick: Teleport",
   "psi_oddities.spellpiece.trick_teleport.desc": "Teleport target to any place",
   "psi_oddities.spellpiece.trick_play_music": "Trick: Play Music",

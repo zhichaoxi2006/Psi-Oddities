@@ -5,9 +5,12 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "InventoryAssemblerOutputMixin",
-    "SlotCADOutputMixin"
+    "SlotCADOutputMixin",
+    "elytra.ElytraPlayerMixin",
+    "elytra.LivingEntityMixin"
   ],
   "client": [
+    "elytra.ClientElytraMixin"
   ],
   "injectors": {
     "defaultRequire": 1
