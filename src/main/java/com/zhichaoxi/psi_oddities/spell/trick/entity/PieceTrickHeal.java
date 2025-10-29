@@ -15,7 +15,7 @@ public class PieceTrickHeal extends PieceTrick {
     public PieceTrickHeal(Spell spell) {
         super(spell);
         setStatLabel(EnumSpellStat.POTENCY, new StatLabel(SpellParam.GENERIC_NAME_NUMBER, true).abs().mul(15));
-        setStatLabel(EnumSpellStat.COST, new StatLabel(SpellParam.GENERIC_NAME_NUMBER, true).abs().mul(20));
+        setStatLabel(EnumSpellStat.COST, new StatLabel(SpellParam.GENERIC_NAME_NUMBER, true).abs().mul(40));
     }
 
     @Override
@@ -34,7 +34,7 @@ public class PieceTrickHeal extends PieceTrick {
         }
 
         meta.addStat(EnumSpellStat.POTENCY, (int) (healVal * 15));
-        meta.addStat(EnumSpellStat.COST, (int) (healVal * 20));
+        meta.addStat(EnumSpellStat.COST, (int) (healVal * 40));
     }
 
     public static void heal(SpellContext context, LivingEntity targetVal, float healVal) throws SpellRuntimeException {

@@ -16,7 +16,7 @@ public class PieceTrickAttack extends PieceTrick {
     public PieceTrickAttack(Spell spell) {
         super(spell);
         setStatLabel(EnumSpellStat.POTENCY, new StatLabel(SpellParam.GENERIC_NAME_NUMBER, true).abs().mul(15));
-        setStatLabel(EnumSpellStat.COST, new StatLabel(SpellParam.GENERIC_NAME_NUMBER, true).abs().mul(20));
+        setStatLabel(EnumSpellStat.COST, new StatLabel(SpellParam.GENERIC_NAME_NUMBER, true).abs().mul(40));
     }
 
     @Override
@@ -35,7 +35,7 @@ public class PieceTrickAttack extends PieceTrick {
         }
 
         meta.addStat(EnumSpellStat.POTENCY, (int) (damageVal * 15));
-        meta.addStat(EnumSpellStat.COST, (int) (damageVal * 20));
+        meta.addStat(EnumSpellStat.COST, (int) (damageVal * 40));
     }
 
     public static void attack(SpellContext context, Entity targetVal, float damageVal) throws SpellRuntimeException {

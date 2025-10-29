@@ -15,7 +15,7 @@ public class PieceTrickHealthReversal extends PieceTrick {
     public PieceTrickHealthReversal(Spell spell) {
         super(spell);
         setStatLabel(EnumSpellStat.POTENCY, new StatLabel(SpellParam.GENERIC_NAME_TIME, true).add(20));
-        setStatLabel(EnumSpellStat.COST, new StatLabel(SpellParam.GENERIC_NAME_TIME, true).mul(40));
+        setStatLabel(EnumSpellStat.COST, new StatLabel(SpellParam.GENERIC_NAME_TIME, true).mul(10).add(1000));
     }
 
     @Override
@@ -33,7 +33,7 @@ public class PieceTrickHealthReversal extends PieceTrick {
         }
 
         meta.addStat(EnumSpellStat.POTENCY, (int) (timeVal + 20));
-        meta.addStat(EnumSpellStat.COST, timeVal.intValue() * 4);
+        meta.addStat(EnumSpellStat.COST, timeVal.intValue() * 10 + 1000);
     }
 
     @Override

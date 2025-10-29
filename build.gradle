@@ -74,11 +74,16 @@ neoForge {
     // Default run configurations.
     // These can be tweaked, removed, or duplicated as needed.
     runs {
-        client {
+        "client" {
             client()
+            systemProperty("forge.logging.console.level", "debug")
+            gameDirectory = file("run/client/Dev")
+        }
 
-            // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        "client_01" {
+            client()
+            gameDirectory = file("run/client/Player01")
+            programArguments.addAll("--username", "Player01")
         }
 
         server {
@@ -153,7 +158,6 @@ dependencies {
     jarJar("curse.maven:shield-api-1048720:7006594")
 
     runtimeOnly("curse.maven:mekanism-268560:7017663")
-
 
     runtimeOnly("curse.maven:powerful-dummy-1276893:6956101")
 

@@ -35,7 +35,7 @@ public class PieceTrickMassAttack extends PieceTrick {
         }
 
         meta.addStat(EnumSpellStat.POTENCY, (int) (damageVal * 40));
-        meta.addStat(EnumSpellStat.COST, (int) (damageVal * 55));
+        meta.addStat(EnumSpellStat.COST, (int) (damageVal * 160));
     }
 
     @Override

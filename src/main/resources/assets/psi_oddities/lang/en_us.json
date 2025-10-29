@@ -13,6 +13,7 @@
   "psi.data_type.string": "String",
 
   "psi.event.on_dying": "§bEvent§7: Dying",
+  "psi_oddities.event.blocked": "§bEvent§7: Shield Blocked",
 
   "psi_oddities.spellerror.stack_overflow": "ERROR: Stack Overflow",
   "psi_oddities.spellerror.cast_failed": "ERROR: Cast Failed",
@@ -27,7 +28,7 @@
   "item.psi_oddities.flux_drive": "Flux Drive",
   "item.psi_oddities.psimetal_shield": "Psimetal Shield",
   "item.psi_oddities.inline_caster": "Inline Caster",
-  "item.psi_oddities.dying_exosuit_sensor": "Dying Exosuit Sensor",
+  "item.psi_oddities.exosuit_sensor_dying": "Exosuit Sensor Dying",
 
   "psi_oddities.spellpiece.trick_health_reversal": "Trick: Health Reversal",
   "psi_oddities.spellpiece.trick_health_reversal.desc": "Takes the caster back in time, but it is only effective for health points",
@@ -110,6 +111,5 @@
   "psi_oddities.spellpiece.trick_cast": "Trick: Cast",
   "psi_oddities.spellpiece.trick_cast.desc": "Cast the bullet",
   "psi_oddities.spellpiece.selector_recursion_depth": "Selector: Recursion Depth",
-  "psi_oddities.spellpiece.selector_recursion_depth.desc": "Selects the CAD's recursion depth ",
-  "psi_oddities.event.blocked": "\u00a7bEvent\u00a77: Shield Blocked"
+  "psi_oddities.spellpiece.selector_recursion_depth.desc": "Selects the CAD's recursion depth "
 }

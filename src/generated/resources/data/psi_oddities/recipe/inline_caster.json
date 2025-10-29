@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "psi:psimetal"
+    },
+    "S": {
+      "item": "psi:cad_socket_basic"
+    }
+  },
+  "pattern": [
+    "   ",
+    "PPP",
+    "PS "
+  ],
+  "result": {
+    "count": 1,
+    "id": "psi_oddities:inline_caster"
+  }
+}

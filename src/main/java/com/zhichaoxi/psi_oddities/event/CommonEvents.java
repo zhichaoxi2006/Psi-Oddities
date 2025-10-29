@@ -91,7 +91,7 @@ public class CommonEvents {
         PsiWingData psiWingData = PsiWingUtil.getPsiWingData(player);
         if (psiWingData.isEnabled() && psiWingData.getGracePeriod() == 0 && (player.onGround() || player.horizontalCollision)) {
             PsiWingUtil.disableWing(player);
-        } else {
+        } else if(psiWingData.isEnabled()) {
             psiWingData.setGracePeriod(Math.max(psiWingData.getGracePeriod() - 1, 0));
             if (player.level().random.nextFloat() < 0.02) {
                 player.level().playSound(null, player.getX(), player.getY(), player.getZ(),

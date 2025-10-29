@@ -1,21 +1,44 @@
 {
   "itemGroup.psi_oddities": "Psi Oddities",
+
   "psi_oddities.spellparam.item_stack": "物品",
   "psi_oddities.spellparam.spell": "术式",
+  "psi_oddities.spellparam.id": "ID",
   "psi_oddities.spellparam.param1": "参数A",
   "psi_oddities.spellparam.param2": "参数B",
   "psi_oddities.spellparam.param3": "参数C",
+
   "psi.data_type.item_stack": "物品",
   "psi.data_type.spell": "术式",
+  "psi.data_type.string": "字符串",
+
+  "psi.event.on_dying": "§事件§7: 濒死",
+  "psi_oddities.event.blocked": "§b事件§7：盾牌格挡",
+
   "psi_oddities.spellerror.stack_overflow": "错误：栈溢出",
   "psi_oddities.spellerror.cast_failed": "错误：施法失败",
   "psi_oddities.spellerror.nan_comment": "错误：注释值不是数字",
   "psi_oddities.spellerror.null_string": "错误：字符串为空",
   "psi_oddities.spellerror.null_item_stack": "错误：物品为空",
+  "psi_oddities.spellerror.invaild_spell_acceptor": "错误：非法的法术接受器",
+  "psi_oddities.spellerror.invaild_sound_event": "错误：非法的音效",
+
   "psi_oddities.not_enough_psi": "因果律强制执行：Psi能量不足，无法满足法术需求。",
+
   "item.psi_oddities.cad_battery_the_dirac_sanction": "狄拉克制裁",
   "item.psi_oddities.flux_drive": "通量驱动器",
   "item.psi_oddities.psimetal_shield": "Psi金属盾",
+  "item.psi_oddities.inline_caster": "集成辅助演算机",
+  "item.psi_oddities.exosuit_sensor_dying": "濒死传感器",
+
+  "psi_oddities.spellpiece.trick_health_reversal": "启动式：生命回溯",
+  "psi_oddities.spellpiece.trick_health_reversal.desc": "将施法者送回过去，但仅对生命值有效",
+  "psi_oddities.spellpiece.trick_psi_wing": "启动式：Psi之翼",
+  "psi_oddities.spellpiece.trick_psi_wing.desc": "将一束PSI能量在目标身旁塑成翅膀状，并赋予其足够物质性，从而允许施法者滑翔。",
+  "psi_oddities.spellpiece.trick_teleport": "启动式：传送",
+  "psi_oddities.spellpiece.trick_teleport.desc": "将目标传送到任意位置",
+  "psi_oddities.spellpiece.trick_play_music": "启动式：播放音效",
+  "psi_oddities.spellpiece.trick_play_music.desc": "播放指定的音效",
   "psi_oddities.spellpiece.trick_cleanse": "启动式：净化",
   "psi_oddities.spellpiece.trick_cleanse.desc": "净化目标的负面状态效果",
   "psi_oddities.spellpiece.selector_current_spell": "选择符：当前术式",
@@ -89,6 +112,5 @@
   "psi_oddities.spellpiece.trick_cast": "启动式：施放",
   "psi_oddities.spellpiece.trick_cast.desc": "施放法术弹中的法术",
   "psi_oddities.spellpiece.selector_recursion_depth": "选择符：递归深度",
-  "psi_oddities.spellpiece.selector_recursion_depth.desc": "获取CAD施法的递归深度",
-  "psi_oddities.event.blocked": "§b事件§7：盾牌格挡"
+  "psi_oddities.spellpiece.selector_recursion_depth.desc": "获取CAD施法的递归深度"
 }
