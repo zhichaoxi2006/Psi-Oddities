@@ -2,12 +2,14 @@ package com.zhichaoxi.psi_oddities.datagen;
 
 import com.zhichaoxi.psi_oddities.PsiOddities;
 import com.zhichaoxi.psi_oddities.item.base.ModItems;
-import com.zhichaoxi.psi_oddities.lib.LibItemNames;
 import net.minecraft.advancements.Criterion;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.*;
+import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.world.item.Items;
 import org.jetbrains.annotations.NotNull;
 import vazkii.psi.common.lib.ModTags;
@@ -26,7 +28,6 @@ public class PsiOdditiesRecipeGenerator extends RecipeProvider {
         Criterion<InventoryChangeTrigger.TriggerInstance> hasPsigem = has(ModTags.GEM_PSIGEM);
         Criterion<InventoryChangeTrigger.TriggerInstance> hasPsimetal = has(ModTags.INGOT_PSIMETAL);
         Criterion<InventoryChangeTrigger.TriggerInstance> hasEbonyPsimetal = has(ModTags.INGOT_EBONY_PSIMETAL);
-        Criterion<InventoryChangeTrigger.TriggerInstance> hasIvoryPsimetal = has(ModTags.INGOT_IVORY_PSIMETAL);
         Criterion<InventoryChangeTrigger.TriggerInstance> hasTotemOfUndying = has(Items.TOTEM_OF_UNDYING);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.inlineCaster)

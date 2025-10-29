@@ -43,7 +43,7 @@ public class PieceTrickHealthReversal extends PieceTrick {
         Stack<Float> healthChangelog = player.getData(ModAttachments.EIDOS_CHANGELOG);
         for(int counter = 0;counter < timeVal;counter++) {
             int size = healthChangelog.size() - 1;
-            float health = 0;
+            float health;
             try {
                 health = healthChangelog.get(size - counter);
             } catch (ArrayIndexOutOfBoundsException e) {

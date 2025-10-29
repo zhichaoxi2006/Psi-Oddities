@@ -78,9 +78,6 @@ public class CommonEvents {
             return;
         }
 
-        PlayerDataHandler.PlayerData data = PlayerDataHandler.get(player);
-        ItemStack cad = PsiAPI.getPlayerCAD(player);
-
         float health = player.getHealth();
         Stack<Float> healthChangelog = player.getData(ModAttachments.EIDOS_CHANGELOG);
         if(healthChangelog.size() > 600) {

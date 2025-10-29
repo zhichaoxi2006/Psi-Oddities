@@ -1,7 +1,6 @@
 package com.zhichaoxi.psi_oddities.spell.trick.entity;
 
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.player.Player;
 import vazkii.psi.api.spell.*;
 import vazkii.psi.api.spell.param.ParamEntityListWrapper;
 import vazkii.psi.api.spell.param.ParamNumber;
@@ -40,7 +39,6 @@ public class PieceTrickMassAttack extends PieceTrick {
 
     @Override
     public Object execute(SpellContext context) throws SpellRuntimeException {
-        Player caster = context.caster;
         EntityListWrapper targetVal = this.getParamValue(context, target);
         float damageVal = this.getParamValue(context, number).floatValue();
 
