@@ -48,7 +48,7 @@ public class PsiOddities {
         return ResourceLocation.fromNamespaceAndPath(MODID, path);
     }
 
-    @EventBusSubscriber(modid = MODID)
+    @EventBusSubscriber(value = Dist.CLIENT, modid = MODID)
     public static class ClientSetup {
         @SubscribeEvent
         public static void registerRenderers(final EntityRenderersEvent.AddLayers event) {
