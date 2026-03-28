@@ -74,7 +74,7 @@ public class CommonEvents {
     @SubscribeEvent
     private static void onPlayerTick(PlayerTickEvent.Post event) {
         Player player = event.getEntity();
-        if (player instanceof LocalPlayer) {
+        if (player.isLocalPlayer()) {
             return;
         }
 
